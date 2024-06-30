@@ -6,13 +6,15 @@ import { SharedModule } from '../shared/shared.module';
   standalone: true,
   imports: [SharedModule],
   template: `
-    <h1>Todos Works!</h1>
-    <ul>
-      <!-- @for (todo of store().todos; track todo.id; let idx = $index, e = $even) {
+    <section>
+      <h1>Todos Works!</h1>
+      <ul>
+        <!-- @for (todo of store().todos; track todo.id; let idx = $index, e = $even) {
       <li>
         <span data-testid="todo-title" class="mr-5">{{ todo.title }}</span>
       } </li> -->
-    </ul>
+      </ul>
+    </section>
   `,
 })
 export class TodosComponent implements OnInit {

@@ -6,11 +6,11 @@ import { SharedModule } from '../shared/shared.module';
   standalone: true,
   imports: [SharedModule],
   template: `
-    <div>
+    <section>
       <h1>Angular Query</h1>
       <div>todos left: 0</div>
       <div>posts left: 0</div>
-    </div>
+    </section>
   `,
 })
 export class HomeComponent {}

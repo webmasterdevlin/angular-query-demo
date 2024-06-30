@@ -21,7 +21,9 @@
     "@nx/angular": "19.3.2",
     "@tanstack/angular-query-experimental": "^5.49.1",
     "axios": "^1.7.2",
+    "clsx": "^2.1.1",
     "rxjs": "~7.8.0",
+    "tailwind-merge": "^2.3.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.14.3"
   },
