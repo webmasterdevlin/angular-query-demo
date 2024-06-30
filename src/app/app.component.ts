@@ -17,11 +17,11 @@ import { FooterComponent } from './shared/components/footer.component';
     AngularQueryDevtools,
   ],
   template: `
-    <app-nav-bar></app-nav-bar>
     <div class="container prose mx-auto">
+      <app-nav-bar></app-nav-bar>
       <router-outlet></router-outlet>
+      <app-footer></app-footer>
     </div>
-    <app-footer></app-footer>
     <angular-query-devtools initialIsOpen />
   `,
 })
