@@ -7,7 +7,7 @@ import { SharedModule } from '../shared/shared.module';
   imports: [SharedModule],
   template: `
     <section>
-      <h1>Angular Query</h1>
+      <h1>Tanstack Angular Query</h1>
       <div>todos left: 0</div>
       <div>posts left: 0</div>
     </section>
