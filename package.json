@@ -5,7 +5,8 @@
   "scripts": {
     "start": "nx serve",
     "build": "nx build",
-    "test": "nx test"
+    "test": "nx test",
+    "backend": "json-server --watch json-server/db.json --routes json-server/routes.json"
   },
   "private": true,
   "dependencies": {
@@ -61,6 +62,7 @@
     "jest": "^29.7.0",
     "jest-environment-jsdom": "^29.7.0",
     "jest-preset-angular": "~14.1.1",
+    "json-server": "0.17.4",
     "nx": "19.3.2",
     "postcss": "^8.4.39",
     "prettier": "^3.3.2",

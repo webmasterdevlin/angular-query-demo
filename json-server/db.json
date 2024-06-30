@@ -1,0 +1,50 @@
+{
+  "movies": [
+    {
+      "id": "ea99cadc-fb29-4a4c-9e81-ba1d7863b7aa",
+      "title": "The Shawshank Redemption",
+      "year": 1994,
+      "director": "Frank Darabont",
+      "duration": "142 min",
+      "genre": ["Drama"],
+      "rate": 9.3
+    },
+    {
+      "id": "39f79a4e-2be4-406c-a140-469c8cd206fb",
+      "title": "The Godfather",
+      "year": 1972,
+      "director": "Francis Ford Coppola",
+      "duration": "175 min",
+      "genre": ["Crime", "Drama"],
+      "rate": 9.2
+    },
+    {
+      "id": "46803509-adf1-49e1-9d4a-ec3813e1f1b9",
+      "title": "The Dark Knight",
+      "year": 2008,
+      "director": "Christopher Nolan",
+      "duration": "152 min",
+      "genre": ["Action", "Crime", "Drama", "Thriller"],
+      "rate": 9.0
+    },
+    {
+      "id": "d12d745e-a21a-4108-ae28-6b87ff74ae70",
+      "title":
+      "The Lord of the Rings: The Return of the King",
+      "year": 2003,
+      "director": "Peter Jackson",
+      "duration": "201 min",
+      "genre": ["Adventure", "Drama", "Fantasy"],
+      "rate": 8.9
+    },
+    {
+      "id": "83e450d3-0d3b-4d9a-862d-16412adb755b",
+      "title": "Pulp Fiction",
+      "year": 1994,
+      "director": "Quentin Tarantino",
+      "duration": "154 min",
+      "genre": ["Crime", "Drama"],
+      "rate": 8.9
+    }
+    ]
+}
