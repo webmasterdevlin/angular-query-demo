@@ -48,7 +48,6 @@ import { HttpService } from './services/http.service';
   `,
 })
 export class AppComponent {
-  service = inject(HttpService);
   contactsQuery = injectQuery(() => ({
     queryKey: [names.contacts],
     queryFn: async () => {
@@ -57,35 +56,11 @@ export class AppComponent {
     },
   }));
 
+  contacts = this.contactsQuery;
+
+  service = inject(HttpService);
+
   newContact() {
     alert('hello');
   }
-
-  contacts = this.contactsQuery;
 }
-// export class AppComponent implements OnInit {
-//   objectToConvert = { name: 'John', age: 30 };
-//   jsonString = JSON.stringify(this.objectToConvert);
-//   http = inject(HttpClient);
-//   id = signal(1);
-//   enabled = signal(false);
-
-//   info = injectQuery(() => ({
-//     queryKey: ['todos', this.id()],
-//     queryFn: async () => {
-//       return lastValueFrom(
-//         this.http.get<ITodo[]>('https://jsonplaceholder.typicode.com/todos')
-//       );
-//     },
-//     enabled: this.enabled(),
-//   }));
-//   result = this.info.data();
-
-//   fetch() {
-//     this.info.refetch();
-//   }
-
-//   ngOnInit() {
-//     this.info.refetch();
-//   }
-// }
