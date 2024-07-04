@@ -6,10 +6,14 @@ import { api, EndPointsKeys } from '../configs/axios.config';
 })
 export class HttpService {
   async get<T>(endpoint: EndPointsKeys) {
-    return await api.get<T>(`${endpoint}?_start=0&_limit=10`);
+    return await api.get<T>(`${endpoint}`);
   }
 
-  async delete<T>(endpoint: EndPointsKeys, id: number) {
+  async getById<T>(endpoint: EndPointsKeys, id: string) {
+    return await api.get<T>(`${endpoint}/${id}`);
+  }
+
+  async delete<T>(endpoint: EndPointsKeys, id: string) {
     return await api.delete<T>(`${endpoint}/${id}`);
   }
 
@@ -17,7 +21,7 @@ export class HttpService {
     return await api.post<T>(endpoint, arg);
   }
 
-  async put<RT, BT>(endpoint: EndPointsKeys, id: number, arg: BT) {
+  async put<RT, BT>(endpoint: EndPointsKeys, id: string, arg: BT) {
     return await api.put<RT>(`${endpoint}/${id}`, arg);
   }
 }

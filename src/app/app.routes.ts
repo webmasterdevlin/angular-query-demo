@@ -4,17 +4,14 @@ export const appRoutes: Routes = [
   {
     path: '',
     loadComponent: () =>
-      import('../app/pages/home.component').then((m) => m.HomeComponent),
+      import('./pages/home.component').then((m) => m.HomeComponent),
   },
   {
-    path: 'posts',
+    path: 'contacts/:id',
     loadComponent: () =>
-      import('../app/pages/posts.component').then((m) => m.PostsComponent),
-  },
-  {
-    path: 'todos',
-    loadComponent: () =>
-      import('../app/pages/todos.component').then((m) => m.TodosComponent),
+      import('./pages/contacts/contactid/contact-id.component').then(
+        (m) => m.ContactIdComponent,
+      ),
   },
   {
     path: '**',

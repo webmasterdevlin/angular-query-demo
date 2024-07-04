@@ -6,11 +6,9 @@ import { SharedModule } from '../shared/shared.module';
   standalone: true,
   imports: [SharedModule],
   template: `
-    <section>
-      <h1>Tanstack Angular Query</h1>
-      <div>todos left: 0</div>
-      <div>posts left: 0</div>
-    </section>
+    <div className="m-8 flex flex-col gap-2 text-center text-gray-dark">
+      <h1>Tanstack Angular Query Demo</h1>
+    </div>
   `,
 })
 export class HomeComponent {}

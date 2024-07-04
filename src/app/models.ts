@@ -11,3 +11,14 @@ export interface Todo {
   title: string;
   completed: boolean;
 }
+
+export interface Contact {
+  id: string;
+  first?: string;
+  last?: string;
+  avatar?: string;
+  email?: string;
+  twitter?: string;
+  favorite?: boolean;
+  notes?: string;
+}
