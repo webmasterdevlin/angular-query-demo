@@ -1,7 +1,7 @@
 import { AngularQueryDevtools } from '@tanstack/angular-query-devtools-experimental';
 import { ChangeDetectionStrategy, Component, signal } from '@angular/core';
-import { PostsComponent } from './shared/components/posts.component';
-import { PostComponent } from './shared/components/post.component';
+import { MoviesComponent } from './shared/components/movies.component';
+import { MovieComponent } from './shared/components/movie.component';
 
 @Component({
   changeDetection: ChangeDetectionStrategy.OnPush,
@@ -9,9 +9,9 @@ import { PostComponent } from './shared/components/post.component';
   standalone: true,
   template: `
     <p>
-      As you visit the posts below, you will notice them in a loading state the
+      As you visit the movies below, you will notice them in a loading state the
       first time you load them. However, after you return to this list and click
-      on any posts you have already visited again, you will see them load
+      on any movies you have already visited again, you will see them load
       instantly and background refresh right before your eyes!
       <strong>
         (You may need to throttle your network speed to simulate longer loading
@@ -19,14 +19,14 @@ import { PostComponent } from './shared/components/post.component';
       </strong>
     </p>
     <angular-query-devtools initialIsOpen="true" />
-    @if (postId() > -1) {
-      <post [postId]="postId()" (setPostId)="postId.set($event)"></post>
+    @if (movieId() > -1) {
+      <movie [movieId]="movieId()" (setMovieId)="movieId.set($event)"></movie>
     } @else {
-      <posts (setPostId)="postId.set($event)" />
+      <movies (setMovieId)="movieId.set($event)" />
     }
   `,
-  imports: [AngularQueryDevtools, PostComponent, PostsComponent],
+  imports: [AngularQueryDevtools, MovieComponent, MoviesComponent],
 })
 export class AppComponent {
-  postId = signal(-1);
+  movieId = signal(-1);
 }
