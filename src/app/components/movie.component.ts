@@ -52,6 +52,7 @@ export class MovieComponent {
   }
 
   id = signal(0);
+
   httpClient = inject(HttpClient);
 
   getMovie$ = (id: number) => {

@@ -1,7 +1,7 @@
 import { AngularQueryDevtools } from '@tanstack/angular-query-devtools-experimental';
 import { ChangeDetectionStrategy, Component, signal } from '@angular/core';
-import { MovieComponent } from './shared/components/movie.component';
-import { MoviesComponent } from './shared/components/movies.component';
+import { MovieComponent } from './components/movie.component';
+import { MoviesComponent } from './components/movies.component';
 
 @Component({
   changeDetection: ChangeDetectionStrategy.OnPush,
