@@ -1,7 +1,7 @@
 import { AngularQueryDevtools } from '@tanstack/angular-query-devtools-experimental';
 import { ChangeDetectionStrategy, Component, signal } from '@angular/core';
-import { MoviesComponent } from './shared/components/movies.component';
 import { MovieComponent } from './shared/components/movie.component';
+import { MoviesComponent } from './shared/components/movies.component';
 
 @Component({
   changeDetection: ChangeDetectionStrategy.OnPush,
@@ -18,15 +18,15 @@ import { MovieComponent } from './shared/components/movie.component';
         sequences)
       </strong>
     </p>
-    <angular-query-devtools initialIsOpen="true" />
-    @if (movieId() > -1) {
-      <movie [movieId]="movieId()" (setMovieId)="movieId.set($event)"></movie>
+    <angular-query-devtools initialIsOpen />
+    @if (id() > -1) {
+      <app-movie [id]="id()" (setMovieId)="id.set($event)" />
     } @else {
-      <movies (setMovieId)="movieId.set($event)" />
+      <app-movies (setMovieId)="id.set($event)" />
     }
   `,
   imports: [AngularQueryDevtools, MovieComponent, MoviesComponent],
 })
 export class AppComponent {
-  movieId = signal(-1);
+  id = signal(-1);
 }

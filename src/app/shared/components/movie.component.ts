@@ -17,7 +17,7 @@ import { Movie } from 'src/app/models';
 
 @Component({
   changeDetection: ChangeDetectionStrategy.OnPush,
-  selector: 'movie',
+  selector: 'app-movie',
   standalone: true,
   template: `
     <div>
@@ -32,7 +32,7 @@ import { Movie } from 'src/app/models';
       @if (movieQuery.data(); as movie) {
         <h1>{{ movie.title }}</h1>
         <div>
-          <p>{{ movie.body }}</p>
+          <p>{{ movie.rate }}</p>
         </div>
         @if (movieQuery.isFetching()) {
           Background Updating...
@@ -45,28 +45,26 @@ export class MovieComponent {
   @Output() setMovieId = new EventEmitter<number>();
 
   // Until Angular supports signal-based inputs, we have to set a signal
-  @Input({ required: true, alias: 'movieId' })
-  set _movieId(value: number) {
-    this.movieId.set(value);
+  @Input({ required: true, alias: 'id' })
+  set _id(value: number) {
+    alert(value);
+    this.id.set(value);
   }
-  movieId = signal(0);
+
+  id = signal(0);
   httpClient = inject(HttpClient);
 
-  getMovie$ = (movieId: number) => {
-    return this.httpClient.get<Movie>(
-      `http://localhost:8080/movies/${movieId}`,
-    );
+  getMovie$ = (id: number) => {
+    return this.httpClient.get<Movie>(`http://localhost:8080/movies/${id}`);
   };
 
   movieQuery = injectQuery(() => ({
-    enabled: this.movieId() > 0,
-    queryKey: ['movie', this.movieId()],
+    enabled: this.id() > 0,
+    queryKey: ['movie', this.id()],
     queryFn: async (context): Promise<Movie> => {
       // Cancels the request when component is destroyed before the request finishes
       const abort$ = fromEvent(context.signal, 'abort');
-      return lastValueFrom(
-        this.getMovie$(this.movieId()).pipe(takeUntil(abort$)),
-      );
+      return lastValueFrom(this.getMovie$(this.id()).pipe(takeUntil(abort$)));
     },
   }));
 

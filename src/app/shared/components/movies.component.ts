@@ -12,10 +12,11 @@ import {
 } from '@tanstack/angular-query-experimental';
 import { lastValueFrom } from 'rxjs';
 import { Movie } from 'src/app/models';
+import { names } from 'src/app/queryKey';
 
 @Component({
   changeDetection: ChangeDetectionStrategy.OnPush,
-  selector: 'movies',
+  selector: 'app-movies',
   standalone: true,
   template: `<div>
     <h1>Movies</h1>
@@ -65,7 +66,7 @@ export class MoviesComponent {
   );
 
   moviesQuery = injectQuery(() => ({
-    queryKey: ['movies'],
+    queryKey: [names.movies],
     queryFn: () => lastValueFrom(this.movies$),
   }));
 

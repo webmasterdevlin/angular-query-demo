@@ -1,3 +1,3 @@
 export const names = {
-  contacts: 'contacts',
+  movies: 'movies',
 };

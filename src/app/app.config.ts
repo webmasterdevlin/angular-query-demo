@@ -1,17 +1,21 @@
-import { ApplicationConfig, provideZoneChangeDetection } from '@angular/core';
-import { provideRouter } from '@angular/router';
-import { appRoutes } from './app.routes';
-import { provideAngularQuery } from '@tanstack/angular-query-experimental';
-import { QueryClient } from '@tanstack/angular-query-experimental';
-import { provideHttpClient } from '@angular/common/http';
-import { LocalStorageService } from './utilities/local-storage.service';
+import { provideHttpClient, withFetch } from '@angular/common/http';
+import {
+  QueryClient,
+  provideAngularQuery,
+} from '@tanstack/angular-query-experimental';
+import type { ApplicationConfig } from '@angular/core';
 
 export const appConfig: ApplicationConfig = {
   providers: [
-    provideZoneChangeDetection({ eventCoalescing: true }),
-    provideRouter(appRoutes),
-    provideAngularQuery(new QueryClient()),
-    provideHttpClient(),
-    { provide: LocalStorageService, useClass: LocalStorageService },
+    provideHttpClient(withFetch()),
+    provideAngularQuery(
+      new QueryClient({
+        defaultOptions: {
+          queries: {
+            gcTime: 1000 * 60 * 60 * 24, // 24 hours
+          },
+        },
+      }),
+    ),
   ],
 };
