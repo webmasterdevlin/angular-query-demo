@@ -3,10 +3,9 @@ import {
   Component,
   ChangeDetectionStrategy,
   Output,
-  Input,
-  signal,
   inject,
   EventEmitter,
+  input,
 } from '@angular/core';
 import {
   injectQuery,
@@ -14,6 +13,8 @@ import {
 } from '@tanstack/angular-query-experimental';
 import { fromEvent, lastValueFrom, takeUntil } from 'rxjs';
 import { Movie } from 'src/app/models';
+import { MovieService } from '../services/movie.service';
+import { names } from '../queryKey';
 
 @Component({
   changeDetection: ChangeDetectionStrategy.OnPush,
@@ -44,28 +45,19 @@ import { Movie } from 'src/app/models';
 export class MovieComponent {
   @Output() setMovieId = new EventEmitter<number>();
 
-  // Until Angular supports signal-based inputs, we have to set a signal
-  @Input({ required: true, alias: 'id' })
-  set _id(value: number) {
-    alert(value);
-    this.id.set(value);
-  }
+  id = input(0);
 
-  id = signal(0);
-
-  httpClient = inject(HttpClient);
-
-  getMovie$ = (id: number) => {
-    return this.httpClient.get<Movie>(`http://localhost:8080/movies/${id}`);
-  };
+  #movieService = inject(MovieService);
 
   movieQuery = injectQuery(() => ({
     enabled: this.id() > 0,
-    queryKey: ['movie', this.id()],
+    queryKey: [names.movie, this.id()],
     queryFn: async (context): Promise<Movie> => {
       // Cancels the request when component is destroyed before the request finishes
       const abort$ = fromEvent(context.signal, 'abort');
-      return lastValueFrom(this.getMovie$(this.id()).pipe(takeUntil(abort$)));
+      return lastValueFrom(
+        this.#movieService.movieById$(this.id()).pipe(takeUntil(abort$)),
+      );
     },
   }));
 
