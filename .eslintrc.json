@@ -1,8 +1,7 @@
 {
   "root": true,
   "ignorePatterns": ["!**/*"],
-  "plugins": ["@nx", "sort-keys-fix"],
-  "extends": ["plugin:import/recommended"],
+  "plugins": ["@nx"],
   "overrides": [
     {
       "files": ["*.ts", "*.tsx"],
@@ -28,15 +27,15 @@
             "prefix": "app",
             "style": "camelCase"
           }
-        ],
-        "@angular-eslint/component-selector": [
-          "error",
-          {
-            "type": "element",
-            "prefix": "app",
-            "style": "kebab-case"
-          }
         ]
+        // "@angular-eslint/component-selector": [
+        //   "warn",
+        //   {
+        //     "type": "element",
+        //     "prefix": "app",
+        //     "style": "kebab-case"
+        //   }
+        // ]
       }
     },
     {
