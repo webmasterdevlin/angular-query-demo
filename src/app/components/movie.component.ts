@@ -22,11 +22,11 @@ import { names } from '../queryKey';
   standalone: true,
   template: `
     <div>
-      <div>
-        <a (click)="setMovieId.emit(-1)" href="#"> Back </a>
-      </div>
+      <h2>
+        <a (click)="setMovieId.emit(-1)" href="#">🔙</a>
+      </h2>
       @if (movieQuery.status() === 'pending') {
-        Loading...
+        <pre>Loading. Please wait.</pre>
       } @else if (movieQuery.status() === 'error') {
         Error: {{ movieQuery.error()?.message }}
       }
@@ -35,9 +35,11 @@ import { names } from '../queryKey';
         <div>
           <p>{{ movie.rate }}</p>
         </div>
-        @if (movieQuery.isFetching()) {
-          Background Updating...
-        }
+        <div class="flex items-center justify-center">
+          @if (movieQuery.isFetching()) {
+            <pre>Fetching in the background</pre>
+          }
+        </div>
       }
     </div>
   `,

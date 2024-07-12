@@ -4,6 +4,7 @@
   "license": "MIT",
   "scripts": {
     "start": "nx serve",
+    "reset": "nx reset",
     "build": "nx build",
     "test": "nx test",
     "backend": "json-server --port 8080 --watch json-server/db.json --routes json-server/routes.json"

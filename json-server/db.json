@@ -7,7 +7,9 @@
       "director": "Frank Darabont",
       "duration": "142 min",
       "genre": ["Drama"],
-      "rate": 9.3
+      "rate": 9.3,
+      "description": "Two imprisoned men bond over a number of years, finding solace and eventual redemption through acts of common decency.",
+      "imageUrl": "https://m.media-amazon.com/images/M/MV5BNDE3ODcxYzMtY2YzZC00NmNlLWJiNDMtZDViZWM2MzIxZDYwXkEyXkFqcGdeQXVyNjAwNDUxODI@._V1_.jpg"
     },
     {
       "id": 2,
@@ -16,7 +18,9 @@
       "director": "Francis Ford Coppola",
       "duration": "175 min",
       "genre": ["Crime", "Drama"],
-      "rate": 9.2
+      "rate": 9.2,
+      "description": "The aging patriarch of an organized crime dynasty transfers control of his clandestine empire to his reluctant son.",
+      "imageUrl": "https://m.media-amazon.com/images/M/MV5BM2MyNjYxNmUtYTAwNi00MTYxLWJmNWYtYzZlODY3ZTk3OTFlXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_.jpg"
     },
     {
       "id": 3,
@@ -25,7 +29,9 @@
       "director": "Christopher Nolan",
       "duration": "152 min",
       "genre": ["Action", "Crime", "Drama", "Thriller"],
-      "rate": 9.0
+      "rate": 9.0,
+      "description": "When the menace known as the Joker wreaks havoc and chaos on the people of Gotham, Batman must accept one of the greatest psychological and physical tests of his ability to fight injustice.",
+      "imageUrl": "https://m.media-amazon.com/images/M/MV5BMTMxNTMwODM0NF5BMl5BanBnXkFtZTcwODAyMTk2Mw@@._V1_.jpg"
     },
     {
       "id": 4,
@@ -34,7 +40,9 @@
       "director": "Peter Jackson",
       "duration": "201 min",
       "genre": ["Adventure", "Drama", "Fantasy"],
-      "rate": 8.9
+      "rate": 8.9,
+      "description": "Gandalf and Aragorn lead the World of middle earth to the end of the war of the ring.",
+      "imageUrl": "https://m.media-amazon.com/images/M/MV5BNzA5ZDNlZWMtM2NhNS00NDJjLTk4NDItYTRmY2EwMWZlMTY3XkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_.jpg"
     },
     {
       "id": 5,
@@ -43,7 +51,9 @@
       "director": "Quentin Tarantino",
       "duration": "154 min",
       "genre": ["Crime", "Drama"],
-      "rate": 8.9
+      "rate": 8.9,
+      "description": "The lives of two mob hitmen, a boxer, a gangster and his wife, and a pair of diner bandits intertwine in four tales of violence and redemption.",
+      "imageUrl": "https://m.media-amazon.com/images/M/MV5BNGNhMDIzZTUtNTBlZi00MTRlLWFjM2ItYzViMjE3YzI5MjljXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_.jpg"
     }
   ]
 }
