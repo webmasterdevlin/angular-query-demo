@@ -25,6 +25,13 @@ import { SharedModule } from '../shared/shared.module';
   template: `<div>
     <h1>Watch History</h1>
     <h2>This week</h2>
+    <div class="flex items-center justify-center">
+      @if (moviesQuery.isFetching()) {
+        <div
+          class="h-16 w-16 animate-spin rounded-full border-4 border-t-4 border-blue-500 border-t-transparent"
+        ></div>
+      }
+    </div>
     @switch (moviesQuery.status()) {
       @case ('pending') {
         <pre>Loading. Please wait.</pre>
@@ -78,13 +85,6 @@ import { SharedModule } from '../shared/shared.module';
         </div>
       }
     }
-    <div class="flex items-center justify-center">
-      @if (moviesQuery.isFetching()) {
-        <div
-          class="h-16 w-16 animate-spin rounded-full border-4 border-t-4 border-blue-500 border-t-transparent"
-        ></div>
-      }
-    </div>
   </div> `,
 })
 export class MoviesComponent {
@@ -98,17 +98,19 @@ export class MoviesComponent {
   moviesQuery = injectQuery(() => ({
     queryKey: [names.movies],
     queryFn: () => lastValueFrom(this.#movieService.allMovies$()),
+    // Refetch the data every second
+    // refetchInterval: 5000,
   }));
 
   deleteMovieMutation = injectMutation(() => ({
     // mutationFn is a function that returns a promise
-    mutationFn: (id: number) =>
-      lastValueFrom(this.#movieService.deleteMovie$(id)),
+    mutationFn: (variables: number) =>
+      lastValueFrom(this.#movieService.deleteMovie$(variables)),
     // onMutate is a function that returns a context object
-    onMutate: async (id: number) => {
+    onMutate: async (variables: number) => {
       // Cancel any outgoing refetches (so they don't overwrite our optimistic update)
       await this.queryClient.cancelQueries({
-        queryKey: [names.movie, id],
+        queryKey: [names.movie, variables],
       });
       // Snapshot the previous value
       const backup = this.queryClient.getQueryData<Movie[]>([names.movies]);
@@ -116,7 +118,7 @@ export class MoviesComponent {
       if (backup) {
         this.queryClient.setQueryData<Movie[]>(
           [names.movies],
-          [...backup.filter((m) => m.id !== id)],
+          [...backup.filter((m) => m.id !== variables)],
         );
         return { backup };
       } else {
