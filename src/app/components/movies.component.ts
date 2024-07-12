@@ -101,21 +101,22 @@ export class MoviesComponent {
   }));
 
   deleteMovieMutation = injectMutation(() => ({
-    mutationFn: (id) => lastValueFrom(this.#movieService.deleteMovie$(id)),
+    mutationFn: (id: number) => {
+      return lastValueFrom(this.#movieService.deleteMovie$(id));
+    },
     onMutate: async (id: number) => {
       // Cancel any outgoing refetches (so they don't overwrite our optimistic update)
       await this.queryClient.cancelQueries({
-        queryKey: [names.movies],
+        queryKey: [names.movie, id],
       });
       // Snapshot the previous value
-      const backup = this.queryClient.getQueryData<{ data: Movie[] }>([
-        names.movies,
-      ]);
+      const backup = this.queryClient.getQueryData<Movie[]>([names.movies]);
       // Optimistically update by removing the movie from the list
       if (backup) {
-        this.queryClient.setQueryData<{ data: Movie[] }>([names.movies], {
-          data: [...backup.data.filter((m) => m.id !== id)],
-        });
+        this.queryClient.setQueryData<Movie[]>(
+          [names.movies],
+          [...backup.filter((m) => m.id !== id)],
+        );
         return { backup };
       } else {
         return { backup: null };
@@ -124,10 +125,7 @@ export class MoviesComponent {
     // We can use the onError handler to rollback the cache.
     onError: (error, variables, context) => {
       if (context?.backup) {
-        this.queryClient.setQueryData<Movie[]>(
-          [names.movies],
-          context.backup.data,
-        );
+        this.queryClient.setQueryData<Movie[]>([names.movies], context.backup);
       }
     },
     // always refetch after error or success:

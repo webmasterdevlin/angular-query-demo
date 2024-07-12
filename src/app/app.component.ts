@@ -9,7 +9,7 @@ import { MoviesComponent } from './components/movies.component';
   standalone: true,
   template: `
     <div
-      class="container prose mx-auto mt-4 rounded-lg bg-gray-500 p-4 shadow-lg"
+      class="container prose mx-auto mt-4 rounded-lg bg-gray-50 p-4 shadow-lg"
     >
       @if (id() > -1) {
         <app-movie [id]="id()" (setMovieId)="id.set($event)" />
