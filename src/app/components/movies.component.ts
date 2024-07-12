@@ -1,4 +1,3 @@
-import { HttpClient } from '@angular/common/http';
 import {
   Component,
   ChangeDetectionStrategy,
@@ -28,17 +27,20 @@ import { SharedModule } from '../shared/shared.module';
     <h2>This week</h2>
     @switch (moviesQuery.status()) {
       @case ('pending') {
-        loading...
+        <pre>Loading. Please wait.</pre>
       }
       @case ('error') {
-        Error: {{ moviesQuery.error()?.message }}
+        <pre>
+          Error: {{ moviesQuery.error()?.message }}
+        </pre
+        >
       }
       @default {
         <div class="todo-container m mb-4">
           @for (movie of moviesQuery.data(); track movie.id) {
             <div class="flex flex-row items-start gap-6">
               <img [src]="movie.imageUrl" [alt]="movie.title" width="200" />
-              <div class="mt-6 flex flex-col justify-start">
+              <div class="mt-6 flex flex-col flex-wrap justify-start">
                 <div class="flex flex-wrap gap-10">
                   <a
                     href="#"
@@ -52,17 +54,23 @@ import { SharedModule } from '../shared/shared.module';
                       })
                     "
                   >
-                    {{ movie.title }}
+                    {{ movie.title }} ({{ movie.year }})
                   </a>
                   <button (click)="handleDelete(movie.id)">❌</button>
                 </div>
                 <div>
                   <small class="text-orange-500"
-                    >rating: {{ movie.rate }}</small
+                    >rating: {{ movie.rate }}/10</small
                   >
                 </div>
                 <div>
                   <p>{{ movie.description }}</p>
+                </div>
+                <div>
+                  <p>Director: {{ movie.director }}</p>
+                </div>
+                <div>
+                  <p>Duration: {{ movie.duration }}</p>
                 </div>
               </div>
             </div>
