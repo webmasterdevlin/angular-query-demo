@@ -64,11 +64,12 @@ import { cn } from '../utilities/style';
   `,
 })
 export class MovieComponent {
-  @Output() setMovieId = new EventEmitter<number>();
+  #movieService = inject(MovieService);
+
   cn = cn;
   id = input(0);
 
-  #movieService = inject(MovieService);
+  @Output() setMovieId = new EventEmitter<number>();
 
   movieQuery = injectQuery(() => ({
     enabled: this.id() > 0,

@@ -88,12 +88,12 @@ import { SharedModule } from '../shared/shared.module';
   </div> `,
 })
 export class MoviesComponent {
-  cn = cn;
   queryClient = injectQueryClient();
+  #movieService = inject(MovieService);
+
+  cn = cn;
 
   @Output() setMovieId = new EventEmitter<number>();
-
-  #movieService = inject(MovieService);
 
   moviesQuery = injectQuery(() => ({
     queryKey: [names.movies],
@@ -101,9 +101,10 @@ export class MoviesComponent {
   }));
 
   deleteMovieMutation = injectMutation(() => ({
-    mutationFn: (id: number) => {
-      return lastValueFrom(this.#movieService.deleteMovie$(id));
-    },
+    // mutationFn is a function that returns a promise
+    mutationFn: (id: number) =>
+      lastValueFrom(this.#movieService.deleteMovie$(id)),
+    // onMutate is a function that returns a context object
     onMutate: async (id: number) => {
       // Cancel any outgoing refetches (so they don't overwrite our optimistic update)
       await this.queryClient.cancelQueries({
@@ -119,16 +120,20 @@ export class MoviesComponent {
         );
         return { backup };
       } else {
-        return { backup: null };
+        return null;
       }
     },
-    // We can use the onError handler to rollback the cache.
+    // onSuccess is a function that runs after the mutation is successful
+    onSuccess: () => {
+      // for pessimistic update like saving a new movie using a form
+      return;
+    },
+    // onError is a function that runs after the mutation fails
     onError: (error, variables, context) => {
-      if (context?.backup) {
-        this.queryClient.setQueryData<Movie[]>([names.movies], context.backup);
-      }
+      // We can use the onError handler to rollback the cache.
+      this.queryClient.setQueryData<Movie[]>([names.movies], context?.backup);
     },
-    // always refetch after error or success:
+    // onSettled is a function that runs after the mutation is successful or fails
     onSettled: () => {
       this.queryClient.invalidateQueries({ queryKey: [names.movies] });
     },
