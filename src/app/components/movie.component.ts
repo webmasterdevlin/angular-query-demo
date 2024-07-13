@@ -24,10 +24,10 @@ import { cn } from '../utilities/style';
   template: `
     <div>
       <h2>
-        <a (click)="setMovieId.emit(-1)" href="#">🔙</a>
+        <a (click)="setMovieId.emit(-1)" href="optimistic-update-cache#">🔙</a>
       </h2>
       @if (movieQuery.status() === 'pending') {
-        <pre>Loading. Please wait.</pre>
+        <pre>Loading. Please wait. <span class="text-orange-300">(one-time only)</span></pre>
       } @else if (movieQuery.status() === 'error') {
         <pre>Error: {{ movieQuery.error()?.message }}</pre>
       }

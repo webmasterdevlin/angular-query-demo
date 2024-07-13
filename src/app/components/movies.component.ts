@@ -24,17 +24,16 @@ import { SharedModule } from '../shared/shared.module';
   imports: [SharedModule],
   template: `<div>
     <h1>Watch History</h1>
-    <h2>This week</h2>
-    <div class="flex items-center justify-center">
+    <h2>
+      This week
       @if (moviesQuery.isFetching()) {
-        <div
-          class="h-16 w-16 animate-spin rounded-full border-4 border-t-4 border-blue-500 border-t-transparent"
-        ></div>
+        (fetching in the background)
       }
-    </div>
+    </h2>
+    <div class="flex items-center justify-center"></div>
     @switch (moviesQuery.status()) {
       @case ('pending') {
-        <pre>Loading. Please wait.</pre>
+        <pre>Loading. Please wait. <span class="text-orange-300">(one-time only)</span></pre>
       }
       @case ('error') {
         <pre>
@@ -43,14 +42,14 @@ import { SharedModule } from '../shared/shared.module';
         >
       }
       @default {
-        <div class="todo-container m mb-4">
+        <div class="todo-container mb-4">
           @for (movie of moviesQuery.data(); track movie.id) {
             <div class="flex flex-row items-start gap-6">
               <img [src]="movie.imageUrl" [alt]="movie.title" width="200" />
               <div class="mt-6 flex flex-col flex-wrap justify-start">
                 <div class="flex flex-wrap gap-10">
                   <a
-                    href="#"
+                    href="optimistic-update-cache#"
                     (click)="setMovieId.emit(movie.id)"
                     [ngClass]="
                       cn({
