@@ -12,7 +12,6 @@ import { MoviesComponent } from '../components/movies.component';
     } @else {
       <app-movies (setMovieId)="id.set($event)" />
     }`,
-  styles: ``,
 })
 export class OptimisticUpdateCacheComponent {
   id = signal(-1);

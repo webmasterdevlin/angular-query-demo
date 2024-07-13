@@ -1,7 +1,5 @@
 import { AngularQueryDevtools } from '@tanstack/angular-query-devtools-experimental';
-import { ChangeDetectionStrategy, Component, signal } from '@angular/core';
-import { MovieComponent } from './components/movie.component';
-import { MoviesComponent } from './components/movies.component';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { NavBarComponent } from './components/nav-bar.component';
 

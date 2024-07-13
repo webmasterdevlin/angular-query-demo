@@ -40,6 +40,13 @@ export const appRoutes: Routes = [
       ),
   },
   {
+    path: 'todo-list',
+    loadComponent: () =>
+      import('../app/pages/todo-list.component').then(
+        (m) => m.TodoListComponent,
+      ),
+  },
+  {
     path: '**',
     redirectTo: '',
   },
@@ -52,4 +59,5 @@ export const pathNames = Object.entries({
   pagination: '/pagination',
   polling: '/polling',
   prefetching: '/prefetching',
+  'todo list': '/todo-list',
 } as const);

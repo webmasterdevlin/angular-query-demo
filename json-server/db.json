@@ -55,5 +55,265 @@
       "description": "The lives of two mob hitmen, a boxer, a gangster and his wife, and a pair of diner bandits intertwine in four tales of violence and redemption.",
       "imageUrl": "https://m.media-amazon.com/images/M/MV5BNGNhMDIzZTUtNTBlZi00MTRlLWFjM2ItYzViMjE3YzI5MjljXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_.jpg"
     }
+  ],
+  "todo-list": [
+    {
+      "id": 1,
+      "title": "learn Angular",
+      "completed": false
+    },
+    {
+      "id": 2,
+      "title": "learn rxjs",
+      "completed": false
+    },
+    {
+      "id": 3,
+      "title": "learn analog js",
+      "completed": false
+    },
+    {
+      "id": 4,
+      "title": "learn ngrx",
+      "completed": false
+    }
+  ],
+  "comodities": [
+    {
+      "id": 1,
+      "name": "Rice",
+  "price": 1000,
+      "quantity": 10
+    },
+    {
+      "id": 2,
+      "name": "Beans",
+      "price": 2000,
+      "quantity": 5
+    },
+    {
+      "id": 3,
+      "name": "Yam",
+      "price": 500,
+      "quantity": 20
+    },
+    {
+      "id": 4,
+      "name": "Garri",
+      "price": 1500,
+      "quantity": 15
+    }
+  ],
+  "reports": [
+    {
+      "id": 1,
+      "title": "First report",
+      "description": "This is the first report",
+      "date": "2021-01-01"
+    },
+    {
+      "id": 2,
+      "title": "Second report",
+      "description": "This is the second report",
+      "date": "2021-01-02"
+    },
+    {
+      "id": 3,
+      "title": "Third report",
+      "description": "This is the third report",
+      "date": "2021-01-03"
+    },
+    {
+      "id": 4,
+      "title": "Fourth report",
+      "description": "This is the fourth report",
+      "date": "2021-01-04"
+    },
+    {
+      "id": 5,
+      "title": "Fifth report",
+      "description": "This is the fifth report",
+      "date": "2021-01-05"
+    },
+    {
+      "id": 6,
+      "title": "Sixth report",
+      "description": "This is the sixth report",
+      "date": "2021-01-06"
+    },
+    {
+      "id": 7,
+      "title": "Seventh report",
+      "description": "This is the seventh report",
+      "date": "2021-01-07"
+    },
+    {
+      "id": 8,
+      "title": "Eighth report",
+      "description": "This is the eighth report",
+      "date": "2021-01-08"
+    },
+    {
+      "id": 9,
+      "title": "Ninth report",
+      "description": "This is the ninth report",
+      "date": "2021-01-09"
+    },
+    {
+      "id": 10,
+      "title": "Tenth report",
+      "description": "This is the tenth report",
+      "date": "2021-01-10"
+    },
+    {
+      "id": 11,
+      "title": "Eleventh report",
+      "description": "This is the eleventh report",
+      "date": "2021-01-11"
+    },
+    {
+      "id": 12,
+      "title": "Twelfth report",
+      "description": "This is the twelfth report",
+      "date": "2021-01-12"
+    },
+    {
+      "id": 13,
+      "title": "Thirteenth report",
+      "description": "This is the thirteenth report",
+      "date": "2021-01-13"
+    },
+    {
+      "id": 14,
+      "title": "Fourteenth report",
+      "description": "This is the fourteenth report",
+      "date": "2021-01-14"
+    },
+    {
+      "id": 15,
+      "title": "Fifteenth report",
+      "description": "This is the fifteenth report",
+      "date": "2021-01-15"
+    },
+    {
+      "id": 16,
+      "title": "Sixteenth report",
+      "description": "This is the sixteenth report",
+      "date": "2021-01-16"
+    },
+    {
+      "id": 17,
+      "title": "Seventeenth report",
+      "description": "This is the seventeenth report",
+      "date": "2021-01-17"
+    },
+    {
+      "id": 18,
+      "title": "Eighteenth report",
+      "description": "This is the eighteenth report",
+      "date": "2021-01-18"
+    },
+    {
+      "id": 19,
+      "title": "Nineteenth report",
+      "description": "This is the nineteenth report",
+      "date": "2021-01-19"
+    },
+    {
+      "id": 20,
+      "title": "Twentieth report",
+      "description": "This is the twentieth report",
+      "date": "2021-01-20"
+    },
+    {
+      "id": 21,
+      "title": "Twenty-first report",
+      "description": "This is the twenty-first report",
+      "date": "2021-01-21"
+    },
+    {
+      "id": 22,
+      "title": "Twenty-second report",
+      "description": "This is the twenty-second report",
+      "date": "2021-01-22"
+    },
+    {
+      "id": 23,
+      "title": "Twenty-third report",
+      "description": "This is the twenty-third report",
+      "date": "2021-01-23"
+    },
+    {
+      "id": 24,
+      "title": "Twenty-fourth report",
+      "description": "This is the twenty-fourth report",
+      "date": "2021-01-24"
+    },
+    {
+      "id": 25,
+      "title": "Twenty-fifth report",
+      "description": "This is the twenty-fifth report",
+      "date": "2021-01-25"
+    },
+    {
+      "id": 26,
+      "title": "Twenty-sixth report",
+      "description": "This is the twenty-sixth report",
+      "date": "2021-01-26"
+    },
+    {
+      "id": 27,
+      "title": "Twenty-seventh report",
+      "description": "This is the twenty-seventh report",
+      "date": "2021-01-27"
+    },
+    {
+      "id": 28,
+      "title": "Twenty-eighth report",
+      "description": "This is the twenty-eighth report",
+      "date": "2021-01-28"
+    },
+    {
+      "id": 29,
+      "title": "Twenty-ninth report",
+      "description": "This is the twenty-ninth report",
+      "date": "2021-01-29"
+    },
+    {
+      "id": 30,
+      "title": "Thirtieth report",
+      "description": "This is the thirtieth report",
+      "date": "2021-01-30"
+    },
+    {
+      "id": 31,
+      "title": "Thirty-first report",
+      "description": "This is the thirty-first report",
+      "date": "2021-01-31"
+    },
+    {
+      "id": 32,
+      "title": "Thirty-second report",
+      "description": "This is the thirty-second report",
+      "date": "2021-02-01"
+    },
+    {
+      "id": 33,
+      "title": "Thirty-third report",
+      "description": "This is the thirty-third report",
+      "date": "2021-02-02"
+    },
+    {
+      "id": 34,
+      "title": "Thirty-fourth report",
+      "description": "This is the thirty-fourth report",
+      "date": "2021-02-03"
+    },
+    {
+      "id": 35,
+      "title": "Thirty-fifth report",
+      "description": "This is the thirty-fifth report",
+      "date": "2021-02-04"
+    }
   ]
 }
