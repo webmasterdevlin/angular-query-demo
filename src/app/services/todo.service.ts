@@ -17,6 +17,10 @@ export class TodoService {
   deleteTodo$ = (id: number) =>
     this.#http.delete(`http://localhost:8080/todo-list/${id}`);
 
-  addTodo$ = (todo: Todo) =>
-    this.#http.post(`http://localhost:8080/todo-list`, todo);
+  addTodo$ = (title: string) => {
+    return this.#http.post(`http://localhost:8080/todo-list`, {
+      title,
+      completed: false,
+    });
+  };
 }

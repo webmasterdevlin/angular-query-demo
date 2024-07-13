@@ -29,7 +29,7 @@
       "director": "Christopher Nolan",
       "duration": "152 min",
       "genre": ["Action", "Crime", "Drama", "Thriller"],
-      "rate": 9.0,
+      "rate": 9,
       "description": "When the menace known as the Joker wreaks havoc and chaos on the people of Gotham, Batman must accept one of the greatest psychological and physical tests of his ability to fight injustice.",
       "imageUrl": "https://m.media-amazon.com/images/M/MV5BMTMxNTMwODM0NF5BMl5BanBnXkFtZTcwODAyMTk2Mw@@._V1_.jpg"
     },
@@ -82,7 +82,7 @@
     {
       "id": 1,
       "name": "Rice",
-  "price": 1000,
+      "price": 1000,
       "quantity": 10
     },
     {
