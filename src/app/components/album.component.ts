@@ -20,7 +20,6 @@ import { cn } from '../utilities/style';
   changeDetection: ChangeDetectionStrategy.OnPush,
   selector: 'app-album',
   standalone: true,
-  imports: [],
   template: `
     <div>
       <h2>

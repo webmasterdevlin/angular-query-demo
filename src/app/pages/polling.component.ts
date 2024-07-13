@@ -1,5 +1,4 @@
 import { Component, inject, signal } from '@angular/core';
-import { SharedModule } from '../shared/shared.module';
 import { TodoService } from '../services/todo.service';
 import {
   injectQuery,
@@ -11,7 +10,6 @@ import { lastValueFrom } from 'rxjs';
 @Component({
   selector: 'app-polling',
   standalone: true,
-  imports: [SharedModule],
   template: `
     <div>
       <h1>Auto Refetch with stale-time set to {{ intervalMs() }} ms</h1>

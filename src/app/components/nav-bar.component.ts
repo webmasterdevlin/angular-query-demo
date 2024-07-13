@@ -1,12 +1,11 @@
 import { Component } from '@angular/core';
 import { pathNames } from '../app.routes';
 import { SharedModule } from '../shared/shared.module';
-import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-nav-bar',
   standalone: true,
-  imports: [SharedModule, RouterModule],
+  imports: [SharedModule],
   template: `
     <nav
       class="flex flex-wrap items-center justify-between border-b border-gray-300 bg-white px-4 py-2 capitalize"

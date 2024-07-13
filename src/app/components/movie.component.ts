@@ -20,7 +20,6 @@ import { cn } from '../utilities/style';
   changeDetection: ChangeDetectionStrategy.OnPush,
   selector: 'app-movie',
   standalone: true,
-  imports: [],
   template: `
     <div>
       <h2>

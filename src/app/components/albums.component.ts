@@ -1,5 +1,4 @@
 import { Component, EventEmitter, inject, Output } from '@angular/core';
-import { SharedModule } from '../shared/shared.module';
 import {
   injectQueryClient,
   injectQuery,
@@ -11,7 +10,6 @@ import { AlbumService } from '../services/album.service';
 @Component({
   selector: 'app-albums',
   standalone: true,
-  imports: [SharedModule],
   template: `<div class="todo-container mb-4">
     @for (album of albumsQuery.data(); track album.id) {
       <div
