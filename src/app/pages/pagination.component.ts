@@ -11,7 +11,7 @@ import { names } from '../queryKey';
 @Component({
   selector: 'app-pagination',
   standalone: true,
-  template: `<h2>Pagination</h2>
+  template: `<h2>Pagination (Page {{ page() }})</h2>
     <ul
       class="grid list-none grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5"
     >
