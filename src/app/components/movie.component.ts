@@ -73,12 +73,8 @@ export class MovieComponent {
   movieQuery = injectQuery(() => ({
     enabled: this.id() > 0,
     queryKey: [names.movie, this.id()],
-    queryFn: async (context): Promise<Movie> => {
-      // Cancels the request when component is destroyed before the request finishes
-      const abort$ = fromEvent(context.signal, 'abort');
-      return lastValueFrom(
-        this.#movieService.movieById$(this.id()).pipe(takeUntil(abort$)),
-      );
+    queryFn: () => {
+      return lastValueFrom(this.#movieService.movieById$(this.id()));
     },
   }));
 

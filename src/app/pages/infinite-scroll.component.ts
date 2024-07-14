@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { injectQueryClient } from '@tanstack/angular-query-experimental';
 
 @Component({
   selector: 'app-infinite-scroll',
@@ -6,4 +7,6 @@ import { Component } from '@angular/core';
   template: `<p>infinite-scroll works!</p>`,
   styles: ``,
 })
-export class InfiniteScrollComponent {}
+export class InfiniteScrollComponent {
+  queryClient = injectQueryClient();
+}

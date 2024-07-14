@@ -6,7 +6,6 @@ import {
   injectMutation,
 } from '@tanstack/angular-query-experimental';
 import { lastValueFrom } from 'rxjs';
-import { names } from '../queryKey';
 import { TodoService } from '../services/todo.service';
 
 @Component({
@@ -39,7 +38,7 @@ export class NewTodoComponent {
     mutationFn: (variables: string) =>
       lastValueFrom(this.#todoService.addTodo$(variables)),
     onSuccess: (data) => {
-      this.queryClient.invalidateQueries({ queryKey: [names.todos] });
+      // commented out becaue we are using polling to refetch the data for demo purposes
       // this.queryClient.setQueryData<Todo[]>([names.todos], (cache: any) => {
       //   return cache ? [...cache, data] : [data];
       // });

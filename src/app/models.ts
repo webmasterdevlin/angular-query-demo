@@ -35,3 +35,20 @@ export interface Report {
   description: string;
   date: string;
 }
+
+export interface ComodityPage {
+  first: number;
+  prev: number;
+  next: number;
+  last: number;
+  pages: number;
+  items: number;
+  data: Data[];
+}
+
+export interface Data {
+  id: string;
+  name: string;
+  price: number;
+  quantity: number;
+}

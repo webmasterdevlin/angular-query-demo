@@ -40,13 +40,6 @@ export const appRoutes: Routes = [
       ),
   },
   {
-    path: 'todo-list',
-    loadComponent: () =>
-      import('../app/pages/todo-list.component').then(
-        (m) => m.TodoListComponent,
-      ),
-  },
-  {
     path: 'new-todo',
     loadComponent: () =>
       import('../app/pages/new-todo.component').then((m) => m.NewTodoComponent),
@@ -64,6 +57,5 @@ export const pathNames = Object.entries({
   pagination: '/pagination',
   polling: '/polling',
   prefetching: '/prefetching',
-  'todo list': '/todo-list',
   'new todo': '/new-todo',
 } as const);

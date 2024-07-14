@@ -102,6 +102,582 @@
       "name": "Garri",
       "price": 1500,
       "quantity": 15
+    },
+    {
+      "id": 5,
+      "name": "Plantain",
+      "price": 2000,
+      "quantity": 10
+    },
+    {
+      "id": 6,
+      "name": "Palm oil",
+      "price": 3000,
+      "quantity": 10
+    },
+    {
+      "id": 7,
+      "name": "Groundnut oil",
+      "price": 4000,
+      "quantity": 10
+    },
+    {
+      "id": 8,
+      "name": "Palm kernel oil",
+      "price": 5000,
+      "quantity": 10
+    },
+    {
+      "id": 9,
+      "name": "Egusi",
+      "price": 2000,
+      "quantity": 10
+    },
+    {
+      "id": 10,
+      "name": "Ogbono",
+      "price": 2000,
+      "quantity": 10
+    },
+    {
+      "id": 11,
+      "name": "Okro",
+      "price": 2000,
+      "quantity": 10
+    },
+    {
+      "id": 12,
+      "name": "Pepper",
+      "price": 2000,
+      "quantity": 10
+    },
+    {
+      "id": 13,
+      "name": "Tomato",
+      "price": 2000,
+      "quantity": 10
+    },
+    {
+      "id": 14,
+      "name": "Onion",
+      "price": 2000,
+      "quantity": 10
+    },
+    {
+      "id": 15,
+      "name": "Ginger",
+      "price": 2000,
+      "quantity": 10
+    },
+    {
+      "id": 16,
+      "name": "Garlic",
+      "price": 2000,
+      "quantity": 10
+    },
+    {
+      "id": 17,
+      "name": "Curry",
+      "price": 2000,
+      "quantity": 10
+    },
+    {
+      "id": 18,
+      "name": "Thyme",
+      "price": 2000,
+      "quantity": 10
+    },
+    {
+      "id": 19,
+      "name": "Maggi",
+      "price": 2000,
+      "quantity": 10
+    },
+    {
+      "id": 20,
+      "name": "Salt",
+      "price": 2000,
+      "quantity": 10
+    },
+    {
+      "id": 21,
+      "name": "Sugar",
+      "price": 2000,
+      "quantity": 10
+    },
+    {
+      "id": 22,
+      "name": "Milk",
+      "price": 2000,
+      "quantity": 10
+    },
+    {
+      "id": 23,
+      "name": "Bread",
+      "price": 2000,
+      "quantity": 10
+    },
+    {
+      "id": 24,
+      "name": "Egg",
+      "price": 2000,
+      "quantity": 10
+    },
+    {
+      "id": 25,
+      "name": "Fish",
+      "price": 2000,
+      "quantity": 10
+    },
+    {
+      "id": 26,
+      "name": "Meat",
+      "price": 2000,
+      "quantity": 10
+    },
+    {
+      "id": 27,
+      "name": "Chicken",
+      "price": 2000,
+      "quantity": 10
+    },
+    {
+      "id": 28,
+      "name": "Turkey",
+      "price": 2000,
+      "quantity": 10
+    },
+    {
+      "id": 29,
+      "name": "Beef",
+      "price": 2000,
+      "quantity": 10
+    },
+    {
+      "id": 30,
+      "name": "Pork",
+      "price": 2000,
+      "quantity": 10
+    },
+    {
+      "id": 31,
+      "name": "Sausage",
+      "price": 2000,
+      "quantity": 10
+    },
+    {
+      "id": 32,
+      "name": "Bacon",
+      "price": 2000,
+      "quantity": 10
+    },
+    {
+      "id": 33,
+      "name": "Ham",
+      "price": 2000,
+      "quantity": 10
+    },
+    {
+      "id": 34,
+      "name": "Cheese",
+      "price": 2000,
+      "quantity": 10
+    },
+    {
+      "id": 35,
+      "name": "Butter",
+      "price": 2000,
+      "quantity": 10
+    },
+    {
+      "id": 36,
+      "name": "Yogurt",
+      "price": 2000,
+      "quantity": 10
+    },
+    {
+      "id": 37,
+      "name": "Ice cream",
+      "price": 2000,
+      "quantity": 10
+    },
+    {
+      "id": 38,
+      "name": "Cake",
+      "price": 2000,
+      "quantity": 10
+    },
+    {
+      "id": 39,
+      "name": "Biscuit",
+      "price": 2000,
+      "quantity": 10
+    },
+    {
+      "id": 40,
+      "name": "Chocolate",
+      "price": 2000,
+      "quantity": 10
+    },
+    {
+      "id": 41,
+      "name": "Candy",
+      "price": 2000,
+      "quantity": 10
+    },
+    {
+      "id": 42,
+      "name": "Chips",
+      "price": 2000,
+      "quantity": 10
+    },
+    {
+      "id": 43,
+      "name": "Popcorn",
+      "price": 2000,
+      "quantity": 10
+    },
+    {
+      "id": 44,
+      "name": "Juice",
+      "price": 2000,
+      "quantity": 10
+    },
+    {
+      "id": 45,
+      "name": "Soda",
+      "price": 200,
+      "quantity": 10
+    },
+    {
+      "id": 46,
+      "name": "Water",
+      "price": 100,
+      "quantity": 10
+    },
+    {
+      "id": 47,
+      "name": "Beer",
+      "price": 2000,
+      "quantity": 10
+    },
+    {
+      "id": 48,
+      "name": "Wine",
+      "price": 2000,
+      "quantity": 10
+    },
+    {
+      "id": 49,
+      "name": "Whiskey",
+      "price": 2000,
+      "quantity": 10
+    },
+    {
+      "id": 50,
+      "name": "Vodka",
+      "price": 2000,
+      "quantity": 10
+    },
+    {
+      "id": 51,
+      "name": "Rum",
+      "price": 2000,
+      "quantity": 10
+    },
+    {
+      "id": 52,
+      "name": "Tequila",
+      "price": 2000,
+      "quantity": 10
+    },
+    {
+      "id": 53,
+      "name": "Gin",
+      "price": 2000,
+      "quantity": 10
+    },
+    {
+      "id": 54,
+      "name": "Brandy",
+      "price": 2000,
+      "quantity": 10
+    },
+    {
+      "id": 55,
+      "name": "Cognac",
+      "price": 2000,
+      "quantity": 10
+    },
+    {
+      "id": 56,
+      "name": "Champagne",
+      "price": 2000,
+      "quantity": 10
+    },
+    {
+      "id": 57,
+      "name": "Martini",
+      "price": 2000,
+      "quantity": 10
+    },
+    {
+      "id": 58,
+      "name": "Margarita",
+      "price": 2000,
+      "quantity": 10
+    },
+    {
+      "id": 59,
+      "name": "Mojito",
+      "price": 2000,
+      "quantity": 10
+    },
+    {
+      "id": 60,
+      "name": "Cosmopolitan",
+      "price": 2000,
+      "quantity": 10
+    },
+    {
+      "id": 61,
+      "name": "Bloody Mary",
+      "price": 2000,
+      "quantity": 10
+    },
+    {
+      "id": 62,
+      "name": "Daiquiri",
+      "price": 2000,
+      "quantity": 10
+    },
+    {
+      "id": 63,
+      "name": "Pina Colada",
+      "price": 2000,
+      "quantity": 10
+    },
+    {
+      "id": 64,
+      "name": "Long Island Iced Tea",
+      "price": 2000,
+      "quantity": 10
+    },
+    {
+      "id": 65,
+      "name": "Mai Tai",
+      "price": 2000,
+      "quantity": 10
+    },
+    {
+      "id": 66,
+      "name": "Mint Julep",
+      "price": 2000,
+      "quantity": 10
+    },
+    {
+      "id": 67,
+      "name": "Margarita",
+      "price": 2000,
+      "quantity": 10
+    },
+    {
+      "id": 68,
+      "name": "Mojito",
+      "price": 2000,
+      "quantity": 10
+    },
+    {
+      "id": 69,
+      "name": "Cosmopolitan",
+      "price": 2000,
+      "quantity": 10
+    },
+    {
+      "id": 70,
+      "name": "Bloody Mary",
+      "price": 2000,
+      "quantity": 10
+    },
+    {
+      "id": 71,
+      "name": "Daiquiri",
+      "price": 2000,
+      "quantity": 10
+    },
+    {
+      "id": 72,
+      "name": "Pina Colada",
+      "price": 2000,
+      "quantity": 10
+    },
+    {
+      "id": 73,
+      "name": "Long Island Iced Tea",
+      "price": 2000,
+      "quantity": 10
+    },
+    {
+      "id": 74,
+      "name": "Mai Tai",
+      "price": 2000,
+      "quantity": 10
+    },
+    {
+      "id": 75,
+      "name": "Mint Julep",
+      "price": 2000,
+      "quantity": 10
+    },
+    {
+      "id": 76,
+      "name": "Margarita",
+      "price": 2000,
+      "quantity": 10
+    },
+    {
+      "id": 77,
+      "name": "Mojito",
+      "price": 2000,
+      "quantity": 10
+    },
+    {
+      "id": 78,
+      "name": "Cosmopolitan",
+      "price": 2000,
+      "quantity": 10
+    },
+    {
+      "id": 79,
+      "name": "Bloody Mary",
+      "price": 2000,
+      "quantity": 10
+    },
+    {
+      "id": 80,
+      "name": "Daiquiri",
+      "price": 2000,
+      "quantity": 10
+    },
+    {
+      "id": 81,
+      "name": "Pina Colada",
+      "price": 2000,
+      "quantity": 10
+    },
+    {
+      "id": 82,
+      "name": "Long Island Iced Tea",
+      "price": 2000,
+      "quantity": 10
+    },
+    {
+      "id": 83,
+      "name": "Mai Tai",
+      "price": 2000,
+      "quantity": 10
+    },
+    {
+      "id": 84,
+      "name": "Mint Julep",
+      "price": 2000,
+      "quantity": 10
+    },
+    {
+      "id": 85,
+      "name": "Margarita",
+      "price": 2000,
+      "quantity": 10
+    },
+    {
+      "id": 86,
+      "name": "Mojito",
+      "price": 2000,
+      "quantity": 10
+    },
+    {
+      "id": 87,
+      "name": "Cosmopolitan",
+      "price": 2000,
+      "quantity": 10
+    },
+    {
+      "id": 88,
+      "name": "Bloody Mary",
+      "price": 2000,
+      "quantity": 10
+    },
+    {
+      "id": 89,
+      "name": "Daiquiri",
+      "price": 2000,
+      "quantity": 10
+    },
+    {
+      "id": 90,
+      "name": "Pina Colada",
+      "price": 2000,
+      "quantity": 10
+    },
+    {
+      "id": 91,
+      "name": "Long Island Iced Tea",
+      "price": 2000,
+      "quantity": 10
+    },
+    {
+      "id": 92,
+      "name": "Mai Tai",
+      "price": 2000,
+      "quantity": 10
+    },
+    {
+      "id": 93,
+      "name": "Mint Julep",
+      "price": 2000,
+      "quantity": 10
+    },
+    {
+      "id": 94,
+      "name": "Margarita",
+      "price": 2000,
+      "quantity": 10
+    },
+    {
+      "id": 95,
+      "name": "Mojito",
+      "price": 2000,
+      "quantity": 10
+    },
+    {
+      "id": 96,
+      "name": "Cosmopolitan",
+      "price": 2000,
+      "quantity": 10
+    },
+    {
+      "id": 97,
+      "name": "Bloody Mary",
+      "price": 2000,
+      "quantity": 10
+    },
+    {
+      "id": 98,
+      "name": "Daiquiri",
+      "price": 2000,
+      "quantity": 10
+    },
+    {
+      "id": 99,
+      "name": "Pina Colada",
+      "price": 2000,
+      "quantity": 10
+    },
+    {
+      "id": 100,
+      "name": "Long Island Iced Tea",
+      "price": 2000,
+      "quantity": 10
     }
   ],
   "reports": [

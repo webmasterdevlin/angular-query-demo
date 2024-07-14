@@ -6,10 +6,13 @@ import {
 } from '@tanstack/angular-query-experimental';
 import { names } from '../queryKey';
 import { lastValueFrom } from 'rxjs';
+import { cn } from '../utilities/style';
+import { SharedModule } from '../shared/shared.module';
 
 @Component({
   selector: 'app-polling',
   standalone: true,
+  imports: [SharedModule],
   template: `
     <div>
       <h1>Auto Refetch with stale-time set to {{ intervalMs() }} ms</h1>
@@ -24,6 +27,16 @@ import { lastValueFrom } from 'rxjs';
           max="10000"
         />
       </label>
+      <span
+        [ngClass]="
+          cn(
+            'scale-200 ease ml-2.5 inline-block h-2.5 w-2.5 transform rounded-full transition-all',
+            todoListQuery.isFetching()
+              ? 'bg-green-500 transition-none'
+              : 'bg-transparent'
+          )
+        "
+      ></span>
       <h2>Todo List</h2>
       <ul>
         @for (todo of todoListQuery.data(); track todo.id) {
@@ -34,6 +47,7 @@ import { lastValueFrom } from 'rxjs';
   `,
 })
 export class PollingComponent {
+  cn = cn;
   queryClient = injectQueryClient();
   #todoService = inject(TodoService);
 

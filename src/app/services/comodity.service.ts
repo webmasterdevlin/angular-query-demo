@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable, inject } from '@angular/core';
-import { Comodity } from '../models';
+import { ComodityPage } from '../models';
 
 @Injectable({
   providedIn: 'root',
@@ -8,9 +8,8 @@ import { Comodity } from '../models';
 export class ComodityService {
   #http = inject(HttpClient);
 
-  comodityById$ = (id: number) =>
-    this.#http.get<Comodity>(`http://localhost:8080/comodities/${id}`);
-
-  allcomoditys$ = () =>
-    this.#http.get<Array<Comodity>>('http://localhost:8080/comodities');
+  fetchComodity$ = (page: number, perPage: number) =>
+    this.#http.get<ComodityPage>(
+      `http://localhost:8080/comodities?_page=${page}&_per_page=${perPage}`,
+    );
 }
