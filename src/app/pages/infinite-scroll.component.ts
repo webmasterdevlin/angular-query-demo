@@ -14,6 +14,15 @@ import { InViewDirective } from '../utilities/in-view.directive';
   imports: [InViewDirective],
   template: `
     <h2>Infinite Scroll</h2>
+    @if (infiniteQuery.isFetchingPreviousPage()) {
+      <pre>Loading previous..</pre>
+    } @else {
+      @if (infiniteQuery.hasPreviousPage()) {
+        <pre appInView (inView)="onPreviousPage()">
+Scroll up to load previous..</pre
+        >
+      }
+    }
     @switch (infiniteQuery.status()) {
       @case ('pending') {
         <pre>Loading.. Please wait..</pre>
@@ -46,7 +55,7 @@ import { InViewDirective } from '../utilities/in-view.directive';
           <pre>Loading more..</pre>
         } @else {
           @if (infiniteQuery.hasNextPage()) {
-            <pre appInView (inView)="onInView()">
+            <pre appInView (inView)="onNextPage()">
 Scroll down to load more..</pre
             >
           } @else {
@@ -61,7 +70,7 @@ export class InfiniteScrollComponent {
   queryClient = injectQueryClient();
   #comoditiesService = inject(ComodityService);
 
-  pageSize = 5;
+  pageSize = 7;
 
   infiniteQuery = injectInfiniteQuery(() => ({
     queryKey: [names.comodities],
@@ -71,16 +80,26 @@ export class InfiniteScrollComponent {
       );
     },
     initialPageParam: 1,
-    getPreviousPageParam: (firstPage) => firstPage.prev,
-    getNextPageParam: (lastPage) => lastPage.next,
+    getPreviousPageParam: (firstPage) => firstPage.prev ?? undefined,
+    getNextPageParam: (lastPage) => lastPage.next ?? undefined,
+    maxPages: 3,
   }));
 
-  onInView() {
+  onNextPage() {
     if (
       this.infiniteQuery.hasNextPage() &&
       !this.infiniteQuery.isFetchingNextPage()
     ) {
       this.infiniteQuery.fetchNextPage();
+    }
+  }
+
+  onPreviousPage() {
+    if (
+      this.infiniteQuery.hasPreviousPage() &&
+      !this.infiniteQuery.isFetchingPreviousPage()
+    ) {
+      this.infiniteQuery.fetchPreviousPage();
     }
   }
 }
