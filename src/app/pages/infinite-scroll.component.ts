@@ -1,4 +1,4 @@
-import { Component, inject, signal } from '@angular/core';
+import { Component, inject, signal, OnInit } from '@angular/core';
 import {
   injectQuery,
   injectQueryClient,
@@ -15,9 +15,46 @@ import { ScrollBottomDirective } from '../utilities/scroll-bottom.directive';
   standalone: true,
   imports: [ScrollBottomDirective],
   template: `
-    <div appScrollBottom (scrolledToBottom)="onScrollBottom()">
-      <h2>Infinite Scroll</h2>
-    </div>
+    <h2>Infinite Scroll</h2>
+    @switch (infiniteQuery.status()) {
+      @case ('pending') {
+        <pre>Loading.. Please wait..</pre>
+      }
+      @case ('error') {
+        <pre>{{ infiniteQuery.error() }}</pre>
+      }
+      @default {
+        @for (comodityPage of infiniteQuery.data()?.pages; track comodityPage) {
+          <div appScrollBottom (scrolledToBottom)="onScrollBottom()">
+            @for (comodity of comodityPage.data; track comodity.id) {
+              <div class="mb-5 flex flex-col rounded-md bg-white p-4 shadow-md">
+                <span class="text-lg font-semibold">
+                  Name:
+                  {{ comodity.name }}
+                </span>
+                <span class="text-gray-600">
+                  Price:
+                  {{ comodity.price }}
+                </span>
+                <span class="text-gray-600">
+                  Quantity:
+                  {{ comodity.quantity }}
+                </span>
+              </div>
+            }
+          </div>
+        }
+        @if (infiniteQuery.isFetchingNextPage()) {
+          <pre>Loading more..</pre>
+        } @else {
+          @if (infiniteQuery.hasNextPage()) {
+            <pre>Loading newer..</pre>
+          } @else {
+            <pre>Nothing more to load..</pre>
+          }
+        }
+      }
+    }
   `,
 })
 export class InfiniteScrollComponent {
@@ -25,16 +62,17 @@ export class InfiniteScrollComponent {
   #comoditiesService = inject(ComodityService);
 
   page = signal(1);
-  pageSize = 5;
+  pageSize = 10;
 
-  comoditiesQuery = injectInfiniteQuery(() => ({
+  infiniteQuery = injectInfiniteQuery(() => ({
     queryKey: [names.comodities],
     queryFn: ({ pageParam }) => {
+      console.log('Fetching data...', pageParam);
       return lastValueFrom(
-        this.#comoditiesService.fetchComodity$(this.page(), this.pageSize),
+        this.#comoditiesService.fetchComodity$(pageParam, this.pageSize),
       );
     },
-    initialPageParam: 0,
+    initialPageParam: 1,
     getPreviousPageParam: (firstPage) => firstPage.prev,
     getNextPageParam: (lastPage) => lastPage.next,
   }));
@@ -46,6 +84,6 @@ export class InfiniteScrollComponent {
   }
 
   onScrollBottom() {
-    alert('Scrolled to bottom!');
+    this.infiniteQuery.fetchNextPage();
   }
 }
