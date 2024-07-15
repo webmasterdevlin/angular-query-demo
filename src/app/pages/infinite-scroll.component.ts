@@ -1,20 +1,17 @@
-import { Component, inject, signal, OnInit } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import {
-  injectQuery,
   injectQueryClient,
   injectInfiniteQuery,
-  keepPreviousData,
 } from '@tanstack/angular-query-experimental';
 import { ComodityService } from '../services/comodity.service';
 import { lastValueFrom } from 'rxjs';
 import { names } from '../queryKey';
-import { ScrollBottomDirective } from '../utilities/scroll-bottom.directive';
 import { InViewDirective } from '../utilities/in-view.directive';
 
 @Component({
   selector: 'app-infinite-scroll',
   standalone: true,
-  imports: [ScrollBottomDirective, InViewDirective],
+  imports: [InViewDirective],
   template: `
     <h2>Infinite Scroll</h2>
     @switch (infiniteQuery.status()) {
@@ -49,9 +46,9 @@ import { InViewDirective } from '../utilities/in-view.directive';
           <pre>Loading more..</pre>
         } @else {
           @if (infiniteQuery.hasNextPage()) {
-            <pre>Scroll down to load more..</pre>
-            <!-- Place the directive here to trigger loading more pages -->
-            <div appInView (inView)="onInView()"></div>
+            <pre appInView (inView)="onInView()">
+Scroll down to load more..</pre
+            >
           } @else {
             <pre>Nothing more to load..</pre>
           }
@@ -64,13 +61,11 @@ export class InfiniteScrollComponent {
   queryClient = injectQueryClient();
   #comoditiesService = inject(ComodityService);
 
-  page = signal(1);
-  pageSize = 10;
+  pageSize = 5;
 
   infiniteQuery = injectInfiniteQuery(() => ({
     queryKey: [names.comodities],
     queryFn: ({ pageParam }) => {
-      console.log('Fetching data...', pageParam);
       return lastValueFrom(
         this.#comoditiesService.fetchComodity$(pageParam, this.pageSize),
       );
@@ -79,16 +74,6 @@ export class InfiniteScrollComponent {
     getPreviousPageParam: (firstPage) => firstPage.prev,
     getNextPageParam: (lastPage) => lastPage.next,
   }));
-
-  setPage(page: number) {
-    if (page < 1) return;
-
-    this.page.set(page + this.pageSize);
-  }
-
-  onScrollBottom() {
-    this.infiniteQuery.fetchNextPage();
-  }
 
   onInView() {
     if (
