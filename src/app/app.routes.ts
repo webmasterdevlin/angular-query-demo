@@ -55,7 +55,6 @@ export const pathNames = Object.entries({
   'optimistic update cache': '/optimistic-update-cache',
   'infinite scroll': '/infinite-scroll',
   pagination: '/pagination',
-  polling: '/polling',
   prefetching: '/prefetching',
-  'new todo': '/new-todo',
+  polling: '/polling',
 } as const);

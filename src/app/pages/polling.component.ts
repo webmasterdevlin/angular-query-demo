@@ -38,6 +38,10 @@ import { SharedModule } from '../shared/shared.module';
       ></span>
       <h2>Todo List</h2>
       <ul>
+        <a
+          class="text-indigo-700"
+          routerLink="/new-todo" target="_blank">
+        Add new</a>
         @for (todo of todoListQuery.data(); track todo.id) {
           <li>{{ todo.title }}</li>
         }
