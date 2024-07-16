@@ -1,9 +1,8 @@
 import { Component, inject } from '@angular/core';
 import {
-  injectQueryClient,
   injectInfiniteQuery,
 } from '@tanstack/angular-query-experimental';
-import { ComodityService } from '../services/comodity.service';
+import { CommodityService } from '../services/commodity.service';
 import { lastValueFrom } from 'rxjs';
 import { names } from '../queryKey';
 import { InViewDirective } from '../utilities/in-view.directive';
@@ -28,24 +27,24 @@ Scroll up to load previous..</pre
         <pre>Loading.. Please wait..</pre>
       }
       @case ('error') {
-        <pre>{{ infiniteQuery.error() }}</pre>
+        <pre>{{ infiniteQuery.error()?.message }}</pre>
       }
       @default {
-        @for (comodityPage of infiniteQuery.data()?.pages; track comodityPage) {
+        @for (commodityPage of infiniteQuery.data()?.pages; track commodityPage) {
           <div>
-            @for (comodity of comodityPage.data; track comodity.id) {
+            @for (commodity of commodityPage.data; track commodity.id) {
               <div class="mb-5 flex flex-col rounded-md bg-white p-4 shadow-md">
                 <span class="text-lg font-semibold">
                   Name:
-                  {{ comodity.name }}
+                  {{ commodity.name }}
                 </span>
                 <span class="text-gray-600">
                   Price:
-                  {{ comodity.price }}
+                  {{ commodity.price }}
                 </span>
                 <span class="text-gray-600">
                   Quantity:
-                  {{ comodity.quantity }}
+                  {{ commodity.quantity }}
                 </span>
               </div>
             }
@@ -67,8 +66,7 @@ Scroll down to load more..</pre
   `,
 })
 export class InfiniteScrollComponent {
-  queryClient = injectQueryClient();
-  #comoditiesService = inject(ComodityService);
+  #commoditiesService = inject(CommodityService);
 
   pageSize = 7;
 
@@ -76,7 +74,7 @@ export class InfiniteScrollComponent {
     queryKey: [names.comodities],
     queryFn: ({ pageParam }) => {
       return lastValueFrom(
-        this.#comoditiesService.fetchComodity$(pageParam, this.pageSize),
+        this.#commoditiesService.fetchCommodity$(pageParam, this.pageSize),
       );
     },
     initialPageParam: 1,
@@ -85,21 +83,21 @@ export class InfiniteScrollComponent {
     maxPages: 3,
   }));
 
-  onNextPage() {
+  async onNextPage() {
     if (
       this.infiniteQuery.hasNextPage() &&
       !this.infiniteQuery.isFetchingNextPage()
     ) {
-      this.infiniteQuery.fetchNextPage();
+      await this.infiniteQuery.fetchNextPage();
     }
   }
 
-  onPreviousPage() {
+  async onPreviousPage() {
     if (
       this.infiniteQuery.hasPreviousPage() &&
       !this.infiniteQuery.isFetchingPreviousPage()
     ) {
-      this.infiniteQuery.fetchPreviousPage();
+      await this.infiniteQuery.fetchPreviousPage();
     }
   }
 }

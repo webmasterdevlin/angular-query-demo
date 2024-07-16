@@ -97,8 +97,6 @@ export class MoviesComponent {
   moviesQuery = injectQuery(() => ({
     queryKey: [names.movies],
     queryFn: () => lastValueFrom(this.#movieService.allMovies$()),
-    // Refetch the data every second
-    // refetchInterval: 5000,
   }));
 
   deleteMovieMutation = injectMutation(() => ({
@@ -135,8 +133,8 @@ export class MoviesComponent {
       this.queryClient.setQueryData<Movie[]>([names.movies], context?.backup);
     },
     // onSettled is a function that runs after the mutation is successful or fails
-    onSettled: () => {
-      this.queryClient.invalidateQueries({ queryKey: [names.movies] });
+    onSettled: async () => {
+      await this.queryClient.invalidateQueries({ queryKey: [names.movies] });
     },
   }));
 

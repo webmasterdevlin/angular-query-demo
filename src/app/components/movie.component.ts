@@ -10,8 +10,7 @@ import {
   injectQuery,
   injectQueryClient,
 } from '@tanstack/angular-query-experimental';
-import { fromEvent, lastValueFrom, takeUntil } from 'rxjs';
-import { Movie } from 'src/app/models';
+import { lastValueFrom } from 'rxjs';
 import { MovieService } from '../services/movie.service';
 import { names } from '../queryKey';
 import { cn } from '../utilities/style';
@@ -65,7 +64,6 @@ import { cn } from '../utilities/style';
 export class MovieComponent {
   #movieService = inject(MovieService);
 
-  cn = cn;
   id = input(0);
 
   @Output() setMovieId = new EventEmitter<number>();
@@ -78,5 +76,4 @@ export class MovieComponent {
     },
   }));
 
-  queryClient = injectQueryClient();
 }

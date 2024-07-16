@@ -39,8 +39,11 @@ export class AlbumsComponent {
     queryFn: () => lastValueFrom(this.#albumService.allAlbums$()),
   }));
 
-  handleOnMouseEnter(albumId: number) {
-    this.queryClient.prefetchQuery({
+  async handleOnMouseEnter(albumId: number) {
+    /* When you know or suspect that a certain piece of data will be needed,
+    you can use prefetching to populate the cache with that data ahead of time,
+    leading to a faster experience. */
+    await this.queryClient.prefetchQuery({
       queryKey: [names.album, albumId],
       queryFn: () => lastValueFrom(this.#albumService.albumById$(albumId)),
     });

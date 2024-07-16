@@ -2,7 +2,6 @@ import { Component, inject, signal } from '@angular/core';
 import { TodoService } from '../services/todo.service';
 import {
   injectQuery,
-  injectQueryClient,
 } from '@tanstack/angular-query-experimental';
 import { names } from '../queryKey';
 import { lastValueFrom } from 'rxjs';
@@ -48,7 +47,6 @@ import { SharedModule } from '../shared/shared.module';
 })
 export class PollingComponent {
   cn = cn;
-  queryClient = injectQueryClient();
   #todoService = inject(TodoService);
 
   intervalMs = signal(10000);
@@ -62,7 +60,6 @@ export class PollingComponent {
   todoListQuery = injectQuery(() => ({
     queryKey: [names.todos],
     queryFn: () => lastValueFrom(this.#todoService.allTodos$()),
-    // refetch the data every second
     refetchInterval: this.intervalMs(),
   }));
 }

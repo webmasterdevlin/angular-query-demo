@@ -16,12 +16,6 @@ export interface Todo {
   completed: boolean;
 }
 
-export interface Comodity {
-  id: number;
-  name: string;
-  price: number;
-  quantity: number;
-}
 
 export interface Album {
   userId: number;
@@ -36,17 +30,17 @@ export interface Report {
   date: string;
 }
 
-export interface ComodityPage {
+export interface CommodityPaginate {
   first: number;
   prev: number;
   next: number;
   last: number;
   pages: number;
   items: number;
-  data: Data[];
+  data: Commodity[];
 }
 
-export interface Data {
+export interface Commodity {
   id: string;
   name: string;
   price: number;
