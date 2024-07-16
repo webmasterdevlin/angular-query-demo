@@ -59,7 +59,7 @@ export class PollingComponent {
 
   todoListQuery = injectQuery(() => ({
     queryKey: [names.todos],
-    queryFn: () => lastValueFrom(this.#todoService.allTodos$()),
+    queryFn: () => lastValueFrom(this.#todoService.getTodoList$()),
     refetchInterval: this.intervalMs(),
   }));
 }

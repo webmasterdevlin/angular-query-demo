@@ -33,7 +33,7 @@ export class NewTodoComponent {
 
   addTodoMutation = injectMutation(() => ({
     mutationFn: (variables: string) =>
-      lastValueFrom(this.#todoService.addTodo$(variables)),
+      lastValueFrom(this.#todoService.postTodo$(variables)),
     onSuccess: (data) => {
       // commented out because we are using polling to refetch the data for demo purposes
       // this.queryClient.setQueryData<Todo[]>([names.todos], (cache: any) => {

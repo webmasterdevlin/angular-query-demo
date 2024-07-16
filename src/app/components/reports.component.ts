@@ -5,22 +5,22 @@ import {
 } from '@tanstack/angular-query-experimental';
 import { lastValueFrom } from 'rxjs';
 import { names } from '../queryKey';
-import { AlbumService } from '../services/album.service';
+import { ReportService } from '../services/report.service';
 
 @Component({
-  selector: 'app-albums',
+  selector: 'app-reports',
   standalone: true,
   template: `<h2>Prefetching in tanstack query</h2>
     <div class="todo-container mb-4">
-      @for (album of albumsQuery.data(); track album.id) {
+      @for (report of reportsQuery.data(); track report.id) {
         <div
           class="flex flex-row items-start gap-6"
-          (mouseenter)="handleOnMouseEnter(album.id)"
+          (mouseenter)="handleOnMouseEnter(report.id)"
         >
           <div class="mt-6 flex flex-col flex-wrap justify-start">
             <div class="flex flex-wrap gap-10">
-              <a href="prefetching#" (click)="setAlbumId.emit(album.id)">
-                {{ album.title }}
+              <a href="prefetching#" (click)="setReportId.emit(report.id)">
+                {{ report.title }}
               </a>
             </div>
           </div>
@@ -28,24 +28,24 @@ import { AlbumService } from '../services/album.service';
       }
     </div>`,
 })
-export class AlbumsComponent {
+export class ReportsComponent {
   queryClient = injectQueryClient();
-  #albumService = inject(AlbumService);
+  #reportService = inject(ReportService);
 
-  @Output() setAlbumId = new EventEmitter<number>();
+  @Output() setReportId = new EventEmitter<number>();
 
-  albumsQuery = injectQuery(() => ({
-    queryKey: [names.albums],
-    queryFn: () => lastValueFrom(this.#albumService.allAlbums$()),
+  reportsQuery = injectQuery(() => ({
+    queryKey: [names.reports],
+    queryFn: () => lastValueFrom(this.#reportService.getReports$()),
   }));
 
-  async handleOnMouseEnter(albumId: number) {
+  async handleOnMouseEnter(reportId: number) {
     /* When you know or suspect that a certain piece of data will be needed,
     you can use prefetching to populate the cache with that data ahead of time,
     leading to a faster experience. */
     await this.queryClient.prefetchQuery({
-      queryKey: [names.album, albumId],
-      queryFn: () => lastValueFrom(this.#albumService.albumById$(albumId)),
+      queryKey: [names.report, reportId],
+      queryFn: () => lastValueFrom(this.#reportService.getReportById$(reportId)),
     });
   }
 }

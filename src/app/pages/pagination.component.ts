@@ -62,10 +62,10 @@ export class PaginationComponent {
   pageSize = 10;
 
   commoditiesQuery = injectQuery(() => ({
-    queryKey: [names.comodities, this.page()],
+    queryKey: [names.commodities, this.page()],
     queryFn: () =>
       lastValueFrom(
-        this.#commoditiesService.fetchCommodity$(this.page(), this.pageSize),
+        this.#commoditiesService.getCommodities$(this.page(), this.pageSize),
       ),
     placeholderData: keepPreviousData,
     staleTime: 5000,

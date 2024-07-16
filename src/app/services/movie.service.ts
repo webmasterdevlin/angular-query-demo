@@ -8,10 +8,10 @@ import { Movie } from '../models';
 export class MovieService {
   #http = inject(HttpClient);
 
-  movieById$ = (id: number) =>
+  getMovieById$ = (id: number) =>
     this.#http.get<Movie>(`http://localhost:8080/movies/${id}`);
 
-  allMovies$ = () =>
+  getMovies$ = () =>
     this.#http.get<Array<Movie>>('http://localhost:8080/movies');
 
   deleteMovie$ = (id: number) =>

@@ -8,15 +8,9 @@ import { Report } from '../models';
 export class ReportService {
   #http = inject(HttpClient);
 
-  reportById$ = (id: number) =>
+  getReportById$ = (id: number) =>
     this.#http.get<Report>(`http://localhost:8080/reports/${id}`);
 
-  allReports$ = () =>
+  getReports$ = () =>
     this.#http.get<Array<Report>>('http://localhost:8080/reports');
-
-  deleteReport$ = (id: number) =>
-    this.#http.delete(`http://localhost:8080/reports/${id}`);
-
-  addReport$ = (report: Report) =>
-    this.#http.post(`http://localhost:8080/reports`, report);
 }

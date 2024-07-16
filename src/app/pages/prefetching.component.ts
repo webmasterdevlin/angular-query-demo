@@ -1,15 +1,15 @@
 import { Component, signal } from '@angular/core';
-import { AlbumComponent } from '../components/album.component';
-import { AlbumsComponent } from '../components/albums.component';
+import { ReportComponent } from '../components/report.component';
+import { ReportsComponent } from '../components/reports.component';
 
 @Component({
   selector: 'app-prefetching',
   standalone: true,
-  imports: [AlbumComponent, AlbumsComponent],
+  imports: [ReportComponent, ReportsComponent],
   template: ` @if (id() > -1) {
-      <app-album [id]="id()" (setAlbumId)="id.set($event)" />
+      <app-report [id]="id()" (setReportId)="id.set($event)" />
     } @else {
-      <app-albums (setAlbumId)="id.set($event)" />
+      <app-reports (setReportId)="id.set($event)" />
     }`,
 })
 export class PrefetchingComponent {

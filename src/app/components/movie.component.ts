@@ -8,12 +8,10 @@ import {
 } from '@angular/core';
 import {
   injectQuery,
-  injectQueryClient,
 } from '@tanstack/angular-query-experimental';
 import { lastValueFrom } from 'rxjs';
 import { MovieService } from '../services/movie.service';
 import { names } from '../queryKey';
-import { cn } from '../utilities/style';
 
 @Component({
   changeDetection: ChangeDetectionStrategy.OnPush,
@@ -72,7 +70,7 @@ export class MovieComponent {
     enabled: this.id() > 0,
     queryKey: [names.movie, this.id()],
     queryFn: () => {
-      return lastValueFrom(this.#movieService.movieById$(this.id()));
+      return lastValueFrom(this.#movieService.getMovieById$(this.id()));
     },
   }));
 

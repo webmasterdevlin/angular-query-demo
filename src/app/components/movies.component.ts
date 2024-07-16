@@ -96,7 +96,7 @@ export class MoviesComponent {
 
   moviesQuery = injectQuery(() => ({
     queryKey: [names.movies],
-    queryFn: () => lastValueFrom(this.#movieService.allMovies$()),
+    queryFn: () => lastValueFrom(this.#movieService.getMovies$()),
   }));
 
   deleteMovieMutation = injectMutation(() => ({

@@ -71,10 +71,10 @@ export class InfiniteScrollComponent {
   pageSize = 7;
 
   infiniteQuery = injectInfiniteQuery(() => ({
-    queryKey: [names.comodities],
+    queryKey: [names.commodities],
     queryFn: ({ pageParam }) => {
       return lastValueFrom(
-        this.#commoditiesService.fetchCommodity$(pageParam, this.pageSize),
+        this.#commoditiesService.getCommodities$(pageParam, this.pageSize),
       );
     },
     initialPageParam: 1,

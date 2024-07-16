@@ -8,16 +8,10 @@ import { Todo } from '../models';
 export class TodoService {
   #http = inject(HttpClient);
 
-  todoById$ = (id: number) =>
-    this.#http.get<Todo>(`http://localhost:8080/todo-list/${id}`);
-
-  allTodos$ = () =>
+  getTodoList$ = () =>
     this.#http.get<Array<Todo>>('http://localhost:8080/todo-list');
 
-  deleteTodo$ = (id: number) =>
-    this.#http.delete(`http://localhost:8080/todo-list/${id}`);
-
-  addTodo$ = (title: string) => {
+  postTodo$ = (title: string) => {
     return this.#http.post(`http://localhost:8080/todo-list`, {
       title,
       completed: false,

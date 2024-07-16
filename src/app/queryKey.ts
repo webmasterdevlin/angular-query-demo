@@ -1,9 +1,8 @@
 export const names = {
   movie: 'movie',
   movies: 'movies',
-  album: 'album',
-  albums: 'albums',
-  comodities: 'comodities',
+  commodities: 'commodities',
+  report: 'report',
   reports: 'reports',
   todos: 'todos',
 };
