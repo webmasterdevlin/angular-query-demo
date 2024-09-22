@@ -1,680 +1,678 @@
 {
   "movies": [
     {
-      "id": 1,
+      "id": "1",
       "title": "The Shawshank Redemption",
       "year": 1994,
       "director": "Frank Darabont",
       "duration": "142 min",
-      "genre": ["Drama"],
+      "genre": [
+        "Drama"
+      ],
       "rate": 9.3,
       "description": "Two imprisoned men bond over a number of years, finding solace and eventual redemption through acts of common decency.",
       "imageUrl": "https://m.media-amazon.com/images/M/MV5BNDE3ODcxYzMtY2YzZC00NmNlLWJiNDMtZDViZWM2MzIxZDYwXkEyXkFqcGdeQXVyNjAwNDUxODI@._V1_.jpg"
     },
     {
-      "id": 2,
+      "id": "2",
       "title": "The Godfather",
       "year": 1972,
       "director": "Francis Ford Coppola",
       "duration": "175 min",
-      "genre": ["Crime", "Drama"],
+      "genre": [
+        "Crime",
+        "Drama"
+      ],
       "rate": 9.2,
       "description": "The aging patriarch of an organized crime dynasty transfers control of his clandestine empire to his reluctant son.",
       "imageUrl": "https://m.media-amazon.com/images/M/MV5BM2MyNjYxNmUtYTAwNi00MTYxLWJmNWYtYzZlODY3ZTk3OTFlXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_.jpg"
     },
     {
-      "id": 3,
+      "id": "3",
       "title": "The Dark Knight",
       "year": 2008,
       "director": "Christopher Nolan",
       "duration": "152 min",
-      "genre": ["Action", "Crime", "Drama", "Thriller"],
+      "genre": [
+        "Action",
+        "Crime",
+        "Drama",
+        "Thriller"
+      ],
       "rate": 9,
       "description": "When the menace known as the Joker wreaks havoc and chaos on the people of Gotham, Batman must accept one of the greatest psychological and physical tests of his ability to fight injustice.",
       "imageUrl": "https://m.media-amazon.com/images/M/MV5BMTMxNTMwODM0NF5BMl5BanBnXkFtZTcwODAyMTk2Mw@@._V1_.jpg"
     },
     {
-      "id": 4,
+      "id": "4",
       "title": "The Lord of the Rings: The Return of the King",
       "year": 2003,
       "director": "Peter Jackson",
       "duration": "201 min",
-      "genre": ["Adventure", "Drama", "Fantasy"],
+      "genre": [
+        "Adventure",
+        "Drama",
+        "Fantasy"
+      ],
       "rate": 8.9,
       "description": "Gandalf and Aragorn lead the World of middle earth to the end of the war of the ring.",
       "imageUrl": "https://m.media-amazon.com/images/M/MV5BNzA5ZDNlZWMtM2NhNS00NDJjLTk4NDItYTRmY2EwMWZlMTY3XkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_.jpg"
     },
     {
-      "id": 5,
+      "id": "5",
       "title": "Pulp Fiction",
       "year": 1994,
       "director": "Quentin Tarantino",
       "duration": "154 min",
-      "genre": ["Crime", "Drama"],
+      "genre": [
+        "Crime",
+        "Drama"
+      ],
       "rate": 8.9,
       "description": "The lives of two mob hitmen, a boxer, a gangster and his wife, and a pair of diner bandits intertwine in four tales of violence and redemption.",
       "imageUrl": "https://m.media-amazon.com/images/M/MV5BNGNhMDIzZTUtNTBlZi00MTRlLWFjM2ItYzViMjE3YzI5MjljXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_.jpg"
     }
   ],
   "todo-list": [
-    {
-      "id": 1,
-      "title": "learn Angular",
-      "completed": false
-    },
-    {
-      "id": 2,
-      "title": "learn rxjs",
-      "completed": false
-    },
-    {
-      "id": 3,
-      "title": "learn analog js",
-      "completed": false
-    },
-    {
-      "id": 4,
-      "title": "learn ngrx",
-      "completed": false
-    }
+    
   ],
   "commodities": [
     {
-      "id": 1,
+      "id": "1",
       "name": "Rice",
       "price": 1000,
       "quantity": 10
     },
     {
-      "id": 2,
+      "id": "2",
       "name": "Beans",
       "price": 2000,
       "quantity": 5
     },
     {
-      "id": 3,
+      "id": "3",
       "name": "Yam",
       "price": 500,
       "quantity": 20
     },
     {
-      "id": 4,
+      "id": "4",
       "name": "Garri",
       "price": 1500,
       "quantity": 15
     },
     {
-      "id": 5,
+      "id": "5",
       "name": "Plantain",
       "price": 2000,
       "quantity": 10
     },
     {
-      "id": 6,
+      "id": "6",
       "name": "Palm oil",
       "price": 3000,
       "quantity": 10
     },
     {
-      "id": 7,
+      "id": "7",
       "name": "Groundnut oil",
       "price": 4000,
       "quantity": 10
     },
     {
-      "id": 8,
+      "id": "8",
       "name": "Palm kernel oil",
       "price": 5000,
       "quantity": 10
     },
     {
-      "id": 9,
+      "id": "9",
       "name": "Egusi",
       "price": 2000,
       "quantity": 10
     },
     {
-      "id": 10,
+      "id": "10",
       "name": "Ogbono",
       "price": 2000,
       "quantity": 10
     },
     {
-      "id": 11,
+      "id": "11",
       "name": "Okro",
       "price": 2000,
       "quantity": 10
     },
     {
-      "id": 12,
+      "id": "12",
       "name": "Pepper",
       "price": 2000,
       "quantity": 10
     },
     {
-      "id": 13,
+      "id": "13",
       "name": "Tomato",
       "price": 2000,
       "quantity": 10
     },
     {
-      "id": 14,
+      "id": "14",
       "name": "Onion",
       "price": 2000,
       "quantity": 10
     },
     {
-      "id": 15,
+      "id": "15",
       "name": "Ginger",
       "price": 2000,
       "quantity": 10
     },
     {
-      "id": 16,
+      "id": "16",
       "name": "Garlic",
       "price": 2000,
       "quantity": 10
     },
     {
-      "id": 17,
+      "id": "17",
       "name": "Curry",
       "price": 2000,
       "quantity": 10
     },
     {
-      "id": 18,
+      "id": "18",
       "name": "Thyme",
       "price": 2000,
       "quantity": 10
     },
     {
-      "id": 19,
+      "id": "19",
       "name": "Maggi",
       "price": 2000,
       "quantity": 10
     },
     {
-      "id": 20,
+      "id": "20",
       "name": "Salt",
       "price": 2000,
       "quantity": 10
     },
     {
-      "id": 21,
+      "id": "21",
       "name": "Sugar",
       "price": 2000,
       "quantity": 10
     },
     {
-      "id": 22,
+      "id": "22",
       "name": "Milk",
       "price": 2000,
       "quantity": 10
     },
     {
-      "id": 23,
+      "id": "23",
       "name": "Bread",
       "price": 2000,
       "quantity": 10
     },
     {
-      "id": 24,
+      "id": "24",
       "name": "Egg",
       "price": 2000,
       "quantity": 10
     },
     {
-      "id": 25,
+      "id": "25",
       "name": "Fish",
       "price": 2000,
       "quantity": 10
     },
     {
-      "id": 26,
+      "id": "26",
       "name": "Meat",
       "price": 2000,
       "quantity": 10
     },
     {
-      "id": 27,
+      "id": "27",
       "name": "Chicken",
       "price": 2000,
       "quantity": 10
     },
     {
-      "id": 28,
+      "id": "28",
       "name": "Turkey",
       "price": 2000,
       "quantity": 10
     },
     {
-      "id": 29,
+      "id": "29",
       "name": "Beef",
       "price": 2000,
       "quantity": 10
     },
     {
-      "id": 30,
+      "id": "30",
       "name": "Pork",
       "price": 2000,
       "quantity": 10
     },
     {
-      "id": 31,
+      "id": "31",
       "name": "Sausage",
       "price": 2000,
       "quantity": 10
     },
     {
-      "id": 32,
+      "id": "32",
       "name": "Bacon",
       "price": 2000,
       "quantity": 10
     },
     {
-      "id": 33,
+      "id": "33",
       "name": "Ham",
       "price": 2000,
       "quantity": 10
     },
     {
-      "id": 34,
+      "id": "34",
       "name": "Cheese",
       "price": 2000,
       "quantity": 10
     },
     {
-      "id": 35,
+      "id": "35",
       "name": "Butter",
       "price": 2000,
       "quantity": 10
     },
     {
-      "id": 36,
+      "id": "36",
       "name": "Yogurt",
       "price": 2000,
       "quantity": 10
     },
     {
-      "id": 37,
+      "id": "37",
       "name": "Ice cream",
       "price": 2000,
       "quantity": 10
     },
     {
-      "id": 38,
+      "id": "38",
       "name": "Cake",
       "price": 2000,
       "quantity": 10
     },
     {
-      "id": 39,
+      "id": "39",
       "name": "Biscuit",
       "price": 2000,
       "quantity": 10
     },
     {
-      "id": 40,
+      "id": "40",
       "name": "Chocolate",
       "price": 2000,
       "quantity": 10
     },
     {
-      "id": 41,
+      "id": "41",
       "name": "Candy",
       "price": 2000,
       "quantity": 10
     },
     {
-      "id": 42,
+      "id": "42",
       "name": "Chips",
       "price": 2000,
       "quantity": 10
     },
     {
-      "id": 43,
+      "id": "43",
       "name": "Popcorn",
       "price": 2000,
       "quantity": 10
     },
     {
-      "id": 44,
+      "id": "44",
       "name": "Juice",
       "price": 2000,
       "quantity": 10
     },
     {
-      "id": 45,
+      "id": "45",
       "name": "Soda",
       "price": 200,
       "quantity": 10
     },
     {
-      "id": 46,
+      "id": "46",
       "name": "Water",
       "price": 100,
       "quantity": 10
     },
     {
-      "id": 47,
+      "id": "47",
       "name": "Beer",
       "price": 2000,
       "quantity": 10
     },
     {
-      "id": 48,
+      "id": "48",
       "name": "Wine",
       "price": 2000,
       "quantity": 10
     },
     {
-      "id": 49,
+      "id": "49",
       "name": "Whiskey",
       "price": 2000,
       "quantity": 10
     },
     {
-      "id": 50,
+      "id": "50",
       "name": "Vodka",
       "price": 2000,
       "quantity": 10
     },
     {
-      "id": 51,
+      "id": "51",
       "name": "Rum",
       "price": 2000,
       "quantity": 10
     },
     {
-      "id": 52,
+      "id": "52",
       "name": "Tequila",
       "price": 2000,
       "quantity": 10
     },
     {
-      "id": 53,
+      "id": "53",
       "name": "Gin",
       "price": 2000,
       "quantity": 10
     },
     {
-      "id": 54,
+      "id": "54",
       "name": "Brandy",
       "price": 2000,
       "quantity": 10
     },
     {
-      "id": 55,
+      "id": "55",
       "name": "Cognac",
       "price": 2000,
       "quantity": 10
     },
     {
-      "id": 56,
+      "id": "56",
       "name": "Champagne",
       "price": 2000,
       "quantity": 10
     },
     {
-      "id": 57,
+      "id": "57",
       "name": "Martini",
       "price": 2000,
       "quantity": 10
     },
     {
-      "id": 58,
+      "id": "58",
       "name": "Margarita",
       "price": 2000,
       "quantity": 10
     },
     {
-      "id": 59,
+      "id": "59",
       "name": "Mojito",
       "price": 2000,
       "quantity": 10
     },
     {
-      "id": 60,
+      "id": "60",
       "name": "Cosmopolitan",
       "price": 2000,
       "quantity": 10
     },
     {
-      "id": 61,
+      "id": "61",
       "name": "Bloody Mary",
       "price": 2000,
       "quantity": 10
     },
     {
-      "id": 62,
+      "id": "62",
       "name": "Daiquiri",
       "price": 2000,
       "quantity": 10
     },
     {
-      "id": 63,
+      "id": "63",
       "name": "Pina Colada",
       "price": 2000,
       "quantity": 10
     },
     {
-      "id": 64,
+      "id": "64",
       "name": "Long Island Iced Tea",
       "price": 2000,
       "quantity": 10
     },
     {
-      "id": 65,
+      "id": "65",
       "name": "Mai Tai",
       "price": 2000,
       "quantity": 10
     },
     {
-      "id": 66,
+      "id": "66",
       "name": "Mint Julep",
       "price": 2000,
       "quantity": 10
     },
     {
-      "id": 67,
+      "id": "67",
       "name": "Margarita",
       "price": 2000,
       "quantity": 10
     },
     {
-      "id": 68,
+      "id": "68",
       "name": "Mojito",
       "price": 2000,
       "quantity": 10
     },
     {
-      "id": 69,
+      "id": "69",
       "name": "Cosmopolitan",
       "price": 2000,
       "quantity": 10
     },
     {
-      "id": 70,
+      "id": "70",
       "name": "Bloody Mary",
       "price": 2000,
       "quantity": 10
     },
     {
-      "id": 71,
+      "id": "71",
       "name": "Daiquiri",
       "price": 2000,
       "quantity": 10
     },
     {
-      "id": 72,
+      "id": "72",
       "name": "Pina Colada",
       "price": 2000,
       "quantity": 10
     },
     {
-      "id": 73,
+      "id": "73",
       "name": "Long Island Iced Tea",
       "price": 2000,
       "quantity": 10
     },
     {
-      "id": 74,
+      "id": "74",
       "name": "Mai Tai",
       "price": 2000,
       "quantity": 10
     },
     {
-      "id": 75,
+      "id": "75",
       "name": "Mint Julep",
       "price": 2000,
       "quantity": 10
     },
     {
-      "id": 76,
+      "id": "76",
       "name": "Margarita",
       "price": 2000,
       "quantity": 10
     },
     {
-      "id": 77,
+      "id": "77",
       "name": "Mojito",
       "price": 2000,
       "quantity": 10
     },
     {
-      "id": 78,
+      "id": "78",
       "name": "Cosmopolitan",
       "price": 2000,
       "quantity": 10
     },
     {
-      "id": 79,
+      "id": "79",
       "name": "Bloody Mary",
       "price": 2000,
       "quantity": 10
     },
     {
-      "id": 80,
+      "id": "80",
       "name": "Daiquiri",
       "price": 2000,
       "quantity": 10
     },
     {
-      "id": 81,
+      "id": "81",
       "name": "Pina Colada",
       "price": 2000,
       "quantity": 10
     },
     {
-      "id": 82,
+      "id": "82",
       "name": "Long Island Iced Tea",
       "price": 2000,
       "quantity": 10
     },
     {
-      "id": 83,
+      "id": "83",
       "name": "Mai Tai",
       "price": 2000,
       "quantity": 10
     },
     {
-      "id": 84,
+      "id": "84",
       "name": "Mint Julep",
       "price": 2000,
       "quantity": 10
     },
     {
-      "id": 85,
+      "id": "85",
       "name": "Margarita",
       "price": 2000,
       "quantity": 10
     },
     {
-      "id": 86,
+      "id": "86",
       "name": "Mojito",
       "price": 2000,
       "quantity": 10
     },
     {
-      "id": 87,
+      "id": "87",
       "name": "Cosmopolitan",
       "price": 2000,
       "quantity": 10
     },
     {
-      "id": 88,
+      "id": "88",
       "name": "Bloody Mary",
       "price": 2000,
       "quantity": 10
     },
     {
-      "id": 89,
+      "id": "89",
       "name": "Daiquiri",
       "price": 2000,
       "quantity": 10
     },
     {
-      "id": 90,
+      "id": "90",
       "name": "Pina Colada",
       "price": 2000,
       "quantity": 10
     },
     {
-      "id": 91,
+      "id": "91",
       "name": "Long Island Iced Tea",
       "price": 2000,
       "quantity": 10
     },
     {
-      "id": 92,
+      "id": "92",
       "name": "Mai Tai",
       "price": 2000,
       "quantity": 10
     },
     {
-      "id": 93,
+      "id": "93",
       "name": "Mint Julep",
       "price": 2000,
       "quantity": 10
     },
     {
-      "id": 94,
+      "id": "94",
       "name": "Margarita",
       "price": 2000,
       "quantity": 10
     },
     {
-      "id": 95,
+      "id": "95",
       "name": "Mojito",
       "price": 2000,
       "quantity": 10
     },
     {
-      "id": 96,
+      "id": "96",
       "name": "Cosmopolitan",
       "price": 2000,
       "quantity": 10
     },
     {
-      "id": 97,
+      "id": "97",
       "name": "Bloody Mary",
       "price": 2000,
       "quantity": 10
     },
     {
-      "id": 98,
+      "id": "98",
       "name": "Daiquiri",
       "price": 2000,
       "quantity": 10
     },
     {
-      "id": 99,
+      "id": "99",
       "name": "Pina Colada",
       "price": 2000,
       "quantity": 10
     },
     {
-      "id": 100,
+      "id": "100",
       "name": "Long Island Iced Tea",
       "price": 2000,
       "quantity": 10
@@ -682,211 +680,211 @@
   ],
   "reports": [
     {
-      "id": 1,
+      "id": "1",
       "title": "First report",
       "description": "This is the first report",
       "date": "2021-01-01"
     },
     {
-      "id": 2,
+      "id": "2",
       "title": "Second report",
       "description": "This is the second report",
       "date": "2021-01-02"
     },
     {
-      "id": 3,
+      "id": "3",
       "title": "Third report",
       "description": "This is the third report",
       "date": "2021-01-03"
     },
     {
-      "id": 4,
+      "id": "4",
       "title": "Fourth report",
       "description": "This is the fourth report",
       "date": "2021-01-04"
     },
     {
-      "id": 5,
+      "id": "5",
       "title": "Fifth report",
       "description": "This is the fifth report",
       "date": "2021-01-05"
     },
     {
-      "id": 6,
+      "id": "6",
       "title": "Sixth report",
       "description": "This is the sixth report",
       "date": "2021-01-06"
     },
     {
-      "id": 7,
+      "id": "7",
       "title": "Seventh report",
       "description": "This is the seventh report",
       "date": "2021-01-07"
     },
     {
-      "id": 8,
+      "id": "8",
       "title": "Eighth report",
       "description": "This is the eighth report",
       "date": "2021-01-08"
     },
     {
-      "id": 9,
+      "id": "9",
       "title": "Ninth report",
       "description": "This is the ninth report",
       "date": "2021-01-09"
     },
     {
-      "id": 10,
+      "id": "10",
       "title": "Tenth report",
       "description": "This is the tenth report",
       "date": "2021-01-10"
     },
     {
-      "id": 11,
+      "id": "11",
       "title": "Eleventh report",
       "description": "This is the eleventh report",
       "date": "2021-01-11"
     },
     {
-      "id": 12,
+      "id": "12",
       "title": "Twelfth report",
       "description": "This is the twelfth report",
       "date": "2021-01-12"
     },
     {
-      "id": 13,
+      "id": "13",
       "title": "Thirteenth report",
       "description": "This is the thirteenth report",
       "date": "2021-01-13"
     },
     {
-      "id": 14,
+      "id": "14",
       "title": "Fourteenth report",
       "description": "This is the fourteenth report",
       "date": "2021-01-14"
     },
     {
-      "id": 15,
+      "id": "15",
       "title": "Fifteenth report",
       "description": "This is the fifteenth report",
       "date": "2021-01-15"
     },
     {
-      "id": 16,
+      "id": "16",
       "title": "Sixteenth report",
       "description": "This is the sixteenth report",
       "date": "2021-01-16"
     },
     {
-      "id": 17,
+      "id": "17",
       "title": "Seventeenth report",
       "description": "This is the seventeenth report",
       "date": "2021-01-17"
     },
     {
-      "id": 18,
+      "id": "18",
       "title": "Eighteenth report",
       "description": "This is the eighteenth report",
       "date": "2021-01-18"
     },
     {
-      "id": 19,
+      "id": "19",
       "title": "Nineteenth report",
       "description": "This is the nineteenth report",
       "date": "2021-01-19"
     },
     {
-      "id": 20,
+      "id": "20",
       "title": "Twentieth report",
       "description": "This is the twentieth report",
       "date": "2021-01-20"
     },
     {
-      "id": 21,
+      "id": "21",
       "title": "Twenty-first report",
       "description": "This is the twenty-first report",
       "date": "2021-01-21"
     },
     {
-      "id": 22,
+      "id": "22",
       "title": "Twenty-second report",
       "description": "This is the twenty-second report",
       "date": "2021-01-22"
     },
     {
-      "id": 23,
+      "id": "23",
       "title": "Twenty-third report",
       "description": "This is the twenty-third report",
       "date": "2021-01-23"
     },
     {
-      "id": 24,
+      "id": "24",
       "title": "Twenty-fourth report",
       "description": "This is the twenty-fourth report",
       "date": "2021-01-24"
     },
     {
-      "id": 25,
+      "id": "25",
       "title": "Twenty-fifth report",
       "description": "This is the twenty-fifth report",
       "date": "2021-01-25"
     },
     {
-      "id": 26,
+      "id": "26",
       "title": "Twenty-sixth report",
       "description": "This is the twenty-sixth report",
       "date": "2021-01-26"
     },
     {
-      "id": 27,
+      "id": "27",
       "title": "Twenty-seventh report",
       "description": "This is the twenty-seventh report",
       "date": "2021-01-27"
     },
     {
-      "id": 28,
+      "id": "28",
       "title": "Twenty-eighth report",
       "description": "This is the twenty-eighth report",
       "date": "2021-01-28"
     },
     {
-      "id": 29,
+      "id": "29",
       "title": "Twenty-ninth report",
       "description": "This is the twenty-ninth report",
       "date": "2021-01-29"
     },
     {
-      "id": 30,
+      "id": "30",
       "title": "Thirtieth report",
       "description": "This is the thirtieth report",
       "date": "2021-01-30"
     },
     {
-      "id": 31,
+      "id": "31",
       "title": "Thirty-first report",
       "description": "This is the thirty-first report",
       "date": "2021-01-31"
     },
     {
-      "id": 32,
+      "id": "32",
       "title": "Thirty-second report",
       "description": "This is the thirty-second report",
       "date": "2021-02-01"
     },
     {
-      "id": 33,
+      "id": "33",
       "title": "Thirty-third report",
       "description": "This is the thirty-third report",
       "date": "2021-02-02"
     },
     {
-      "id": 34,
+      "id": "34",
       "title": "Thirty-fourth report",
       "description": "This is the thirty-fourth report",
       "date": "2021-02-03"
     },
     {
-      "id": 35,
+      "id": "35",
       "title": "Thirty-fifth report",
       "description": "This is the thirty-fifth report",
       "date": "2021-02-04"

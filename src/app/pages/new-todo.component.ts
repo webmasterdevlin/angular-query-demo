@@ -6,6 +6,7 @@ import {
 } from '@tanstack/angular-query-experimental';
 import { lastValueFrom } from 'rxjs';
 import { TodoService } from '../services/todo.service';
+import { names } from '../queryKey';
 
 @Component({
   selector: 'app-new-todo',
@@ -32,6 +33,7 @@ export class NewTodoComponent {
   }
 
   addTodoMutation = injectMutation(() => ({
+    queryKey: [names.todos],
     mutationFn: (variables: string) =>
       lastValueFrom(this.#todoService.postTodo$(variables)),
     onSuccess: (data) => {
