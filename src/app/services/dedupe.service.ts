@@ -11,4 +11,9 @@ export class DedupeService {
     this.#http.get(`
        https://jsonplaceholder.typicode.com/posts
         `);
+  
+  getUsers$ = () =>
+    this.#http.get(`
+        https://jsonplaceholder.typicode.com/users
+          `);
 }

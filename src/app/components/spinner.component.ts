@@ -5,30 +5,10 @@ import { SharedModule } from "../shared/shared.module";
   selector: 'app-spinner',
   standalone: true,
   imports: [SharedModule],
-  template: `<div
-  style="
-    display: inline-block;
-    animation: spin 1s linear infinite;
-    padding-left: 12px;
-    padding-right: 12px;
-    transition: all 0.5s;
-    opacity: 1;
-    transition-duration: 0.5s;
-    transition-delay: 0.3s;
-  "
->
+  styles: ``,
+  template: `<div class="inline-block animate-spin pl-3 pr-3 transition-all opacity-100 duration-500 delay-300">
   🌀
-</div>
-<style>
-  @keyframes spin {
-    0% {
-      transform: rotate(0deg);
-    }
-    100% {
-      transform: rotate(-360deg);
-    }
-  }
-</style>`,
+</div>`,
 })
 export class SpinnerComponent {
 

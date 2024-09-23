@@ -3,8 +3,12 @@ import { SharedModule } from '../shared/shared.module';
 import { injectQuery } from '@tanstack/angular-query-experimental';
 import { lastValueFrom } from 'rxjs';
 import { DedupeService } from '../services/dedupe.service';
+import { UntilDestroy, untilDestroyed } from '@ngneat/until-destroy';
 import { SpinnerComponent } from './spinner.component';
+import { names } from '../queryKey';
 
+
+@UntilDestroy()
 @Component({
   standalone: true,
   imports: [SharedModule, SpinnerComponent],
@@ -20,9 +24,18 @@ export class SampleAComponent {
   #myService = inject(DedupeService);
 
   myQuery = injectQuery(() => ({
-    queryKey: ['tests'],
+    queryKey: [names.posts],
     queryFn: () => lastValueFrom(this.#myService.getPosts$()),
-
     staleTime: 5000,
   }));
+
+  fetchUsers() {
+    this.#myService.getUsers$()
+                      .pipe(untilDestroyed(this))
+                      .subscribe();
+  }
+
+  ngOnInit() {
+    this.fetchUsers();
+  }
 }

@@ -6,9 +6,11 @@ import {
 import { CommodityService } from '../services/commodity.service';
 import { lastValueFrom } from 'rxjs';
 import { names } from '../queryKey';
+import { SpinnerComponent } from '../components/spinner.component';
 
 @Component({
   selector: 'app-pagination',
+  imports: [SpinnerComponent],
   standalone: true,
   template: `<h2>Pagination (Page {{ page() }})</h2>
   <ul
@@ -49,9 +51,7 @@ import { names } from '../queryKey';
       Next
     </button>
     @if (commoditiesQuery.isRefetching()) {
-      <div
-        class="h-5 w-5 animate-spin rounded-full border-b-2 border-gray-900"
-      ></div>
+      <app-spinner></app-spinner>
     }
   </div>`,
 })

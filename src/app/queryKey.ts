@@ -5,4 +5,5 @@ export const names = {
   report: 'report',
   reports: 'reports',
   todos: 'todos',
+  posts: 'posts',
 };

@@ -6,7 +6,10 @@ import { DedupeService } from '../services/dedupe.service';
 import { SampleAComponent } from '../components/sample-a.component';
 import { SampleBComponent } from '../components/sample-b.component';
 import { SpinnerComponent } from '../components/spinner.component';
+import { UntilDestroy, untilDestroyed } from '@ngneat/until-destroy';
+import { names } from '../queryKey';
 
+@UntilDestroy()
 @Component({
   standalone: true,
   imports: [SharedModule, SampleAComponent, SampleBComponent, SpinnerComponent],
@@ -23,9 +26,18 @@ export class DedupingComponent {
   #myService = inject(DedupeService);
 
   myQuery = injectQuery(() => ({
-    queryKey: ['tests'],
+    queryKey: [names.posts],
     queryFn: () => lastValueFrom(this.#myService.getPosts$()),
-
     staleTime: 5000,
   }));
+
+  fetchUsers() {
+    this.#myService.getUsers$()
+                      .pipe(untilDestroyed(this))
+                      .subscribe();
+  }
+
+  ngOnInit() {
+    this.fetchUsers();
+  }
 }
