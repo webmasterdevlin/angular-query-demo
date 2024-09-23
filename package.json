@@ -3,7 +3,8 @@
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
-    "start": "nx serve",
+    "start": "concurrently \"pnpm serve\" \"pnpm backend\"",
+    "serve": "nx serve",
     "reset": "nx reset",
     "build": "nx build",
     "test": "nx test",
@@ -60,6 +61,7 @@
     "@typescript-eslint/parser": "^7.16.0",
     "@typescript-eslint/utils": "^8.0.0-alpha.41",
     "autoprefixer": "^10.4.19",
+    "concurrently": "^9.0.1",
     "eslint": "~8.57.0",
     "eslint-config-prettier": "^9.1.0",
     "eslint-import-resolver-typescript": "^3.6.1",

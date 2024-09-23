@@ -1,4 +1,10 @@
 import { Routes } from '@angular/router';
+import { PrefetchingComponent } from './pages/prefetching.component';
+import { PollingComponent } from './pages/polling.component';
+import { PaginationComponent } from './pages/pagination.component';
+import { InfiniteScrollComponent } from './pages/infinite-scroll.component';
+import { OptimisticUpdateCacheComponent } from './pages/optimistic-update-cache.component';
+import { DedupingComponent } from './pages/deduping.component';
 
 export const appRoutes: Routes = [
   {
@@ -8,41 +14,32 @@ export const appRoutes: Routes = [
   },
   {
     path: 'infinite-scroll',
-    loadComponent: () =>
-      import('../app/pages/infinite-scroll.component').then(
-        (m) => m.InfiniteScrollComponent,
-      ),
+    component: InfiniteScrollComponent,
   },
   {
     path: 'optimistic-update-cache',
-    loadComponent: () =>
-      import('../app/pages/optimistic-update-cache.component').then(
-        (m) => m.OptimisticUpdateCacheComponent,
-      ),
+    component: OptimisticUpdateCacheComponent,
   },
   {
     path: 'pagination',
-    loadComponent: () =>
-      import('../app/pages/pagination.component').then(
-        (m) => m.PaginationComponent,
-      ),
+    component: PaginationComponent,
   },
   {
     path: 'polling',
-    loadComponent: () =>
-      import('../app/pages/polling.component').then((m) => m.PollingComponent),
+    component: PollingComponent,
   },
   {
     path: 'prefetching',
-    loadComponent: () =>
-      import('../app/pages/prefetching.component').then(
-        (m) => m.PrefetchingComponent,
-      ),
+    component: PrefetchingComponent,
   },
   {
     path: 'new-todo',
     loadComponent: () =>
       import('../app/pages/new-todo.component').then((m) => m.NewTodoComponent),
+  },
+  {
+    path: 'deduping',
+    component: DedupingComponent,
   },
   {
     path: '**',
@@ -57,4 +54,5 @@ export const pathNames = Object.entries({
   pagination: '/pagination',
   prefetching: '/prefetching',
   polling: '/polling',
+  deduping: '/deduping',
 } as const);
