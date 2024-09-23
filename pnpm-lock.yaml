@@ -178,8 +178,8 @@ importers:
         specifier: ~14.2.4
         version: 14.2.4(qpdq42zgzvat46eh3qivsnz4fa)
       json-server:
-        specifier: ^1.0.0-beta.1
-        version: 1.0.0-beta.1
+        specifier: ^1.0.0-beta.2
+        version: 1.0.0-beta.2
       nx:
         specifier: 19.8.0
         version: 19.8.0(@swc-node/register@1.10.9(@swc/core@1.7.26(@swc/helpers@0.5.13))(@swc/types@0.1.12)(typescript@5.5.4))(@swc/core@1.7.26(@swc/helpers@0.5.13))
@@ -2165,8 +2165,8 @@ packages:
     resolution: {integrity: sha512-+1VkjdD0QBLPodGrJUeqarH8VAIvQODIbwh9XpP5Syisf7YoQgsJKPNFoqqLQlu+VQ/tVSshMR6loPMn8U+dPg==}
     engines: {node: '>=14'}
 
-  '@polka/url@1.0.0-next.25':
-    resolution: {integrity: sha512-j7P6Rgr3mmtdkeDGTe0E/aYyWEWVtc5yFXtHCRHs28/jptDEWfaVOc5T7cblqy1XKPPfCxJc/8DwQ5YgLOZOVQ==}
+  '@polka/url@1.0.0-next.28':
+    resolution: {integrity: sha512-8LduaNlMZGwdZ6qWrKlfa+2M4gahzFkprZiAt2TF8uS0qQgBizKXpXURqvTJ4WtmupWxaLqjRb2UCTe72mu+Aw==}
 
   '@rollup/rollup-android-arm-eabi@4.20.0':
     resolution: {integrity: sha512-TSpWzflCc4VGAUJZlPpgAJE1+V60MePDQnBd7PPkpuEmOy8i87aL6tinFGKBFKuEDikYpig72QzdT3QPYIi+oA==}
@@ -2504,16 +2504,16 @@ packages:
   '@tanstack/query-devtools@5.56.1':
     resolution: {integrity: sha512-xnp9jq/9dHfSCDmmf+A5DjbIjYqbnnUL2ToqlaaviUQGRTapXQ8J+GxusYUu1IG0vZMaWdiVUA4HRGGZYAUU+A==}
 
-  '@tinyhttp/accepts@2.2.2':
-    resolution: {integrity: sha512-DmngnwOaPgNUGgTpX1UdlNrXaGG6k5rHFzslcYlvSQIg7s0PI6bF86U0fYq3q+yhJhKbnwzFez0wU1lAP+bKvA==}
+  '@tinyhttp/accepts@2.2.3':
+    resolution: {integrity: sha512-9pQN6pJAJOU3McmdJWTcyq7LLFW8Lj5q+DadyKcvp+sxMkEpktKX5sbfJgJuOvjk6+1xWl7pe0YL1US1vaO/1w==}
     engines: {node: '>=12.20.0'}
 
-  '@tinyhttp/app@2.2.4':
-    resolution: {integrity: sha512-vFCgE+RncK9+AHpSXHiOxpbaEbpOxYcYHz4K/15Ckh8Sb7WvjA+vveN7bwMqfifyW2uvV3xTKTitUVohf+kDnA==}
+  '@tinyhttp/app@2.4.0':
+    resolution: {integrity: sha512-vOPiCemQRJq5twnl06dde6XnWiNbVMdVRFJWW/yC/9G0qgvV2TvzNNTxrdlz6YmyB7vIC7Fg3qS6m6gx8RbBNQ==}
     engines: {node: '>=14.21.3'}
 
-  '@tinyhttp/content-disposition@2.2.1':
-    resolution: {integrity: sha512-PQ5IWdOn7arScqTV+usIDJvwbanoAXtaopzgxjMS9y7TFwLSIelCblihRBEVIPIkIpsdhSJFH3RF+Daosyj+Aw==}
+  '@tinyhttp/content-disposition@2.2.2':
+    resolution: {integrity: sha512-crXw1txzrS36huQOyQGYFvhTeLeG0Si1xu+/l6kXUVYpE0TjFjEZRqTbuadQLfKGZ0jaI+jJoRyqaWwxOSHW2g==}
     engines: {node: '>=12.20.0'}
 
   '@tinyhttp/content-type@0.1.4':
@@ -2544,28 +2544,28 @@ packages:
     resolution: {integrity: sha512-nO3kq0R1LRl2+CAMlnggm22zE6sT8gfvGbNvSitV6F9eaUSurHP0A8YZFMihSkugHxK+uIegh1TKrqgD8+lyGQ==}
     engines: {node: '>=12.20.0'}
 
-  '@tinyhttp/proxy-addr@2.1.4':
-    resolution: {integrity: sha512-Xb57jBQW3UcwKST1XSkJpyZPyjOVQJjUfXiHULVXf7FZCgnl273+aj0oP15BzpYLuGhO9IjydY5gvYeg2Cny+A==}
+  '@tinyhttp/proxy-addr@2.2.0':
+    resolution: {integrity: sha512-WM/PPL9xNvrs7/8Om5nhKbke5FHrP3EfjOOR+wBnjgESfibqn0K7wdUTnzSLp1lBmemr88os1XvzwymSgaibyA==}
     engines: {node: '>=12.20.0'}
 
-  '@tinyhttp/req@2.2.3':
-    resolution: {integrity: sha512-HtIa4Gaa8QFTlmsvoif/B7yMK5H0WBUegH2kKW6scNwOpFXyxEk+VsctrIVgORrP5lybXAIRXlRhGuBBAMlVhw==}
+  '@tinyhttp/req@2.2.4':
+    resolution: {integrity: sha512-lQAZIAo0NOeghxFOZS57tQzxpHSPPLs9T68Krq2BncEBImKwqaDKUt7M9Y5Kb+rvC/GwIL3LeErhkg7f5iG4IQ==}
     engines: {node: '>=12.20.0'}
 
-  '@tinyhttp/res@2.2.3':
-    resolution: {integrity: sha512-PGl88OOdmMcOuKZaTbhGKAWPoJJf3+EfKIad8ydzjdenVjrTZZjIYJtmwYiUBeEice+YkOCO67qCIekVO5mHlw==}
+  '@tinyhttp/res@2.2.4':
+    resolution: {integrity: sha512-ETBRShnO19oJyIg2XQHQoofXPWeTXPAuwnIVYkU8WaftvXd/Vz4y5+WFQDHUzKlmdGOw5fAFnrEU7pIVMeFeVA==}
     engines: {node: '>=12.20.0'}
 
-  '@tinyhttp/router@2.2.2':
-    resolution: {integrity: sha512-i+1ouhPyTqcuJuOsKqmo7i+YD++0RF2lQLhBpcTnsaegD2gTEa3xW2Pcz7spYQGo7K8PQYtOrL7m9b14+BEXqg==}
+  '@tinyhttp/router@2.2.3':
+    resolution: {integrity: sha512-O0MQqWV3Vpg/uXsMYg19XsIgOhwjyhTYWh51Qng7bxqXixxx2PEvZWnFjP7c84K7kU/nUX41KpkEBTLnznk9/Q==}
     engines: {node: '>=12.20.0'}
 
-  '@tinyhttp/send@2.2.2':
-    resolution: {integrity: sha512-TZkGy9EdGk+vwYWQnjArQftaXAUIgp/fFlgaxlpamsCZKy7o+CNJ75xty4H3SaY3ZPgN47wv8rnJ50rDRQdFFQ==}
+  '@tinyhttp/send@2.2.3':
+    resolution: {integrity: sha512-o4cVHHGQ8WjVBS8UT0EE/2WnjoybrfXikHwsRoNlG1pfrC/Sd01u1N4Te8cOd/9aNGLr4mGxWb5qTm2RRtEi7g==}
     engines: {node: '>=12.20.0'}
 
-  '@tinyhttp/type-is@2.2.3':
-    resolution: {integrity: sha512-RsZ4+or5xI+wrTlrd+/cLZELoJDMd1HSp+1P23VOZSu1xPAsO1XLf1FgluO8GbEW9Ll/l2yC7mO6diKzjc06HA==}
+  '@tinyhttp/type-is@2.2.4':
+    resolution: {integrity: sha512-7F328NheridwjIfefBB2j1PEcKKABpADgv7aCJaE8x8EON77ZFrAkI3Rir7pGjopV7V9MBmW88xUQigBEX2rmQ==}
     engines: {node: '>=12.20.0'}
 
   '@tinyhttp/url@2.1.1':
@@ -3802,10 +3802,6 @@ packages:
   domutils@3.1.0:
     resolution: {integrity: sha512-H78uMmQtI2AhgDJjWeQmHwJJ2bLPD3GMmO7Zja/ZZh84wkm+4ut+IUnUdRa8uCGX88DiVx1j6FRe1XfxEgjEZA==}
 
-  dot-prop@8.0.2:
-    resolution: {integrity: sha512-xaBe6ZT4DHPkg0k4Ytbvn5xoxgpG0jOS1dYxSOwAHPuNLjP3/OzN0gH55SrLqpx8cBfSaVt91lXYkApjb+nYdQ==}
-    engines: {node: '>=16'}
-
   dot-prop@9.0.0:
     resolution: {integrity: sha512-1gxPBJpI/pcjQhKgIU91II6Wkay+dLcN3M6rf2uwP8hRur3HtQXjVrdAK3sjC0piaEuxzMwjXChcETiJl47lAQ==}
     engines: {node: '>=18'}
@@ -4113,8 +4109,8 @@ packages:
     resolution: {integrity: sha512-kVscqXk4OCp68SZ0dkgEKVi6/8ij300KBWTJq32P/dYeWTSwK41WyTxalN1eRmA5Z9UU/LX9D7FWSmV9SAYx6g==}
     engines: {node: '>=0.10.0'}
 
-  eta@3.4.0:
-    resolution: {integrity: sha512-tCsc7WXTjrTx4ZjYLplcqrI3o4mYJ+Z6YspeuGL8tbt/hHoMchwBwtKfwM09svEY86iRapY93vUqQttcNuIO5Q==}
+  eta@3.5.0:
+    resolution: {integrity: sha512-e3x3FBvGzeCIHhF+zhK8FZA2vC5uFn6b4HJjegUbIWrDb4mJ7JjTGMJY9VGIbRVpmSwHopNiaJibhjIr+HfLug==}
     engines: {node: '>=6.0.0'}
 
   etag@1.8.1:
@@ -5093,8 +5089,8 @@ packages:
   json-schema-traverse@1.0.0:
     resolution: {integrity: sha512-NM8/P9n3XjXhIZn1lLhkFaACTOURQXjWhV4BA/RnOv8xvgqtqpAX9IO4mRQxSx1Rlo4tqzeqb0sOlruaOy3dug==}
 
-  json-server@1.0.0-beta.1:
-    resolution: {integrity: sha512-xOKYyxkVai66OTFZq5ulAaXYkqiKMbzVED9tRZ+CMg6v6iaSdIVYas5tIjSMw/mYwDL/nJFTCca308gaL0coyA==}
+  json-server@1.0.0-beta.2:
+    resolution: {integrity: sha512-ZzBM2jkIeBTYIEW5c8DHWJacRqC+ah2u623SV75JYeZv9eJQ0Rv2rSkc2w3f02xykIDlyQ9aitAUIZnNgYB5BQ==}
     engines: {node: '>=18.3'}
     hasBin: true
 
@@ -5401,13 +5397,8 @@ packages:
     engines: {node: '>=4'}
     hasBin: true
 
-  mime@4.0.0-beta.1:
-    resolution: {integrity: sha512-8/p99P1RV17prytee/A6D+8shNqdDzyvGJ/CVfiuXwh4cTsv3P3qGyaYSx2hdqnqbKKqYUfTC5zAjCtcd1BShw==}
-    engines: {node: '>=16'}
-    hasBin: true
-
-  mime@4.0.1:
-    resolution: {integrity: sha512-5lZ5tyrIfliMXzFtkYyekWbtRXObT9OWa8IwQ5uxTBDHucNNwniRqo0yInflj+iYi5CBa6qxadGzGarDfuEOxA==}
+  mime@4.0.4:
+    resolution: {integrity: sha512-v8yqInVjhXyqP6+Kw4fV3ZzeMRqEW6FotRsKXjRS5VMTNIuXsdRoAvklpoRgSqXm6o9VNH4/C0mgedko9DdLsQ==}
     engines: {node: '>=16'}
     hasBin: true
 
@@ -6701,8 +6692,8 @@ packages:
     resolution: {integrity: sha512-l5x7VUUWbjVFbafGLxPWkYsHIhEvmF85tbIeFZWc8ZPtoMyybuEhL7Jye/ooC4/d48FgOjSJXgsF/AJPYCW8Zw==}
     engines: {node: '>= 10.0.0', npm: '>= 3.0.0'}
 
-  sort-on@6.0.0:
-    resolution: {integrity: sha512-d51VlJWoFQjp+cIZRyNusCyJdP5pLAw+H+sC4C2q6RhPBv+RAb/QXXck5q3Kdm7h/ot/kD2AlpGPDee8v+0qiA==}
+  sort-on@6.1.0:
+    resolution: {integrity: sha512-WTECP0nYNWO1n2g5bpsV0yZN9cBmZsF8ThHFbOqVN0HBFRoaQZLLEMvMmJlKHNPYQeVngeI5+jJzIfFqOIo1OA==}
     engines: {node: '>=18'}
 
   sorted-array-functions@1.3.0:
@@ -7127,12 +7118,8 @@ packages:
     resolution: {integrity: sha512-t0rzBq87m3fVcduHDUFhKmyyX+9eo6WQjZvf51Ea/M0Q7+T374Jp1aUiyUl0GKxp8M/OETVHSDvmkyPgvX+X2w==}
     engines: {node: '>=10'}
 
-  type-fest@3.13.1:
-    resolution: {integrity: sha512-tLq3bSNx+xSpwvAJnzrK0Ep5CLNWjvFTOp71URMaAEWBfRb9nnJiBoUe0tF8bI4ZFO3omgBR6NvnbzVUT3Ly4g==}
-    engines: {node: '>=14.16'}
-
-  type-fest@4.21.0:
-    resolution: {integrity: sha512-ADn2w7hVPcK6w1I0uWnM//y1rLXZhzB9mr0a3OirzclKF1Wp6VzevUmzz/NRAWunOT6E8HrnpGY7xOfc6K57fA==}
+  type-fest@4.26.1:
+    resolution: {integrity: sha512-yOGpmOAL7CkKe/91I5O3gPICmJNLJ1G4zFYVAsRHg7M64biSnPtRj0WNQt++bRkjYOqjWXrhnUw1utzmVErAdg==}
     engines: {node: '>=16'}
 
   type-is@1.6.18:
@@ -10863,7 +10850,7 @@ snapshots:
   '@pkgjs/parseargs@0.11.0':
     optional: true
 
-  '@polka/url@1.0.0-next.25': {}
+  '@polka/url@1.0.0-next.28': {}
 
   '@rollup/rollup-android-arm-eabi@4.20.0':
     optional: true
@@ -11136,22 +11123,22 @@ snapshots:
 
   '@tanstack/query-devtools@5.56.1': {}
 
-  '@tinyhttp/accepts@2.2.2':
+  '@tinyhttp/accepts@2.2.3':
     dependencies:
-      mime: 4.0.1
+      mime: 4.0.4
       negotiator: 0.6.3
 
-  '@tinyhttp/app@2.2.4':
+  '@tinyhttp/app@2.4.0':
     dependencies:
       '@tinyhttp/cookie': 2.1.1
-      '@tinyhttp/proxy-addr': 2.1.4
-      '@tinyhttp/req': 2.2.3
-      '@tinyhttp/res': 2.2.3
-      '@tinyhttp/router': 2.2.2
+      '@tinyhttp/proxy-addr': 2.2.0
+      '@tinyhttp/req': 2.2.4
+      '@tinyhttp/res': 2.2.4
+      '@tinyhttp/router': 2.2.3
       header-range-parser: 1.1.3
       regexparam: 2.0.2
 
-  '@tinyhttp/content-disposition@2.2.1': {}
+  '@tinyhttp/content-disposition@2.2.2': {}
 
   '@tinyhttp/content-type@0.1.4': {}
 
@@ -11169,42 +11156,42 @@ snapshots:
 
   '@tinyhttp/forwarded@2.1.1': {}
 
-  '@tinyhttp/proxy-addr@2.1.4':
+  '@tinyhttp/proxy-addr@2.2.0':
     dependencies:
       '@tinyhttp/forwarded': 2.1.1
       ipaddr.js: 2.2.0
 
-  '@tinyhttp/req@2.2.3':
+  '@tinyhttp/req@2.2.4':
     dependencies:
-      '@tinyhttp/accepts': 2.2.2
-      '@tinyhttp/type-is': 2.2.3
+      '@tinyhttp/accepts': 2.2.3
+      '@tinyhttp/type-is': 2.2.4
       '@tinyhttp/url': 2.1.1
       header-range-parser: 1.1.3
 
-  '@tinyhttp/res@2.2.3':
+  '@tinyhttp/res@2.2.4':
     dependencies:
-      '@tinyhttp/content-disposition': 2.2.1
+      '@tinyhttp/content-disposition': 2.2.2
       '@tinyhttp/cookie': 2.1.1
       '@tinyhttp/cookie-signature': 2.1.1
       '@tinyhttp/encode-url': 2.1.1
-      '@tinyhttp/req': 2.2.3
-      '@tinyhttp/send': 2.2.2
+      '@tinyhttp/req': 2.2.4
+      '@tinyhttp/send': 2.2.3
       '@tinyhttp/vary': 0.1.3
       es-escape-html: 0.1.1
-      mime: 4.0.0-beta.1
+      mime: 4.0.4
 
-  '@tinyhttp/router@2.2.2': {}
+  '@tinyhttp/router@2.2.3': {}
 
-  '@tinyhttp/send@2.2.2':
+  '@tinyhttp/send@2.2.3':
     dependencies:
       '@tinyhttp/content-type': 0.1.4
       '@tinyhttp/etag': 2.1.2
-      mime: 4.0.0-beta.1
+      mime: 4.0.4
 
-  '@tinyhttp/type-is@2.2.3':
+  '@tinyhttp/type-is@2.2.4':
     dependencies:
       '@tinyhttp/content-type': 0.1.4
-      mime: 4.0.1
+      mime: 4.0.4
 
   '@tinyhttp/url@2.1.1': {}
 
@@ -12616,13 +12603,9 @@ snapshots:
       domelementtype: 2.3.0
       domhandler: 5.0.3
 
-  dot-prop@8.0.2:
-    dependencies:
-      type-fest: 3.13.1
-
   dot-prop@9.0.0:
     dependencies:
-      type-fest: 4.21.0
+      type-fest: 4.26.1
 
   dotenv-expand@11.0.6:
     dependencies:
@@ -13027,7 +13010,7 @@ snapshots:
 
   esutils@2.0.3: {}
 
-  eta@3.4.0: {}
+  eta@3.5.0: {}
 
   etag@1.8.1: {}
 
@@ -14304,20 +14287,20 @@ snapshots:
 
   json-schema-traverse@1.0.0: {}
 
-  json-server@1.0.0-beta.1:
+  json-server@1.0.0-beta.2:
     dependencies:
-      '@tinyhttp/app': 2.2.4
+      '@tinyhttp/app': 2.4.0
       '@tinyhttp/cors': 2.0.1
       chalk: 5.3.0
       chokidar: 3.6.0
       dot-prop: 9.0.0
-      eta: 3.4.0
+      eta: 3.5.0
       inflection: 3.0.0
       json5: 2.2.3
       lowdb: 7.0.1
       milliparsec: 2.3.0
       sirv: 2.0.4
-      sort-on: 6.0.0
+      sort-on: 6.1.0
 
   json-stable-stringify-without-jsonify@1.0.1: {}
 
@@ -14668,9 +14651,7 @@ snapshots:
 
   mime@1.6.0: {}
 
-  mime@4.0.0-beta.1: {}
-
-  mime@4.0.1: {}
+  mime@4.0.4: {}
 
   mimic-fn@2.1.0: {}
 
@@ -15952,7 +15933,7 @@ snapshots:
 
   sirv@2.0.4:
     dependencies:
-      '@polka/url': 1.0.0-next.25
+      '@polka/url': 1.0.0-next.28
       mrmime: 2.0.0
       totalist: 3.0.1
 
@@ -15995,9 +15976,9 @@ snapshots:
       ip-address: 9.0.5
       smart-buffer: 4.2.0
 
-  sort-on@6.0.0:
+  sort-on@6.1.0:
     dependencies:
-      dot-prop: 8.0.2
+      dot-prop: 9.0.0
 
   sorted-array-functions@1.3.0: {}
 
@@ -16510,9 +16491,7 @@ snapshots:
 
   type-fest@0.21.3: {}
 
-  type-fest@3.13.1: {}
-
-  type-fest@4.21.0: {}
+  type-fest@4.26.1: {}
 
   type-is@1.6.18:
     dependencies:

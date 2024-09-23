@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable, inject } from '@angular/core';
 import { Todo } from '../models';
-import { tap } from 'rxjs';
+import { delay, tap } from 'rxjs';
 
 @Injectable({
   providedIn: 'root',
@@ -12,7 +12,7 @@ export class TodoService {
   getTodoList$ = () =>
     this.#http.get<Array<Todo>>('http://localhost:8080/todo-list').pipe(
       // rxjs operators
-      tap((response) => console.log(JSON.stringify(response)))
+      delay(2000),
     );
 
   postTodo$ = (title: string) => {
@@ -21,7 +21,7 @@ export class TodoService {
       completed: false,
     }).pipe(
       // rxjs operators
-      tap((response) => console.log(JSON.stringify(response)))
+      delay(2000),
     );
   };
 }
