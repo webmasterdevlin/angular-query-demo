@@ -5,22 +5,27 @@ import { lastValueFrom } from 'rxjs';
 import { DedupeService } from '../services/dedupe.service';
 import { SampleAComponent } from '../components/sample-a.component';
 import { SampleBComponent } from '../components/sample-b.component';
+import { SpinnerComponent } from '../components/spinner.component';
 
 @Component({
   standalone: true,
-  imports: [SharedModule, SampleAComponent, SampleBComponent],
-  template: `<p>deduping works!</p>
+  imports: [SharedModule, SampleAComponent, SampleBComponent, SpinnerComponent],
+  template: `
+    <h1>Deduping Page @if (myQuery.isFetching()) {
+      <app-spinner></app-spinner>
+    }
+    </h1>
     <app-sample-a></app-sample-a>
-    <app-sample-b></app-sample-b> `,
+    <app-sample-b></app-sample-b>`,
   styles: ``,
 })
 export class DedupingComponent {
   #myService = inject(DedupeService);
 
-  // commoditiesQuery = injectQuery(() => ({
-  //   queryKey: ['tests'],
-  //   queryFn: () => lastValueFrom(this.#myService.getPosts$()),
+  myQuery = injectQuery(() => ({
+    queryKey: ['tests'],
+    queryFn: () => lastValueFrom(this.#myService.getPosts$()),
 
-  //   staleTime: 5000,
-  // }));
+    staleTime: 5000,
+  }));
 }

@@ -3,18 +3,23 @@ import { SharedModule } from '../shared/shared.module';
 import { injectQuery } from '@tanstack/angular-query-experimental';
 import { lastValueFrom } from 'rxjs';
 import { DedupeService } from '../services/dedupe.service';
+import { SpinnerComponent } from './spinner.component';
 
 @Component({
   standalone: true,
-  imports: [SharedModule],
-  template: `<p>sample-a works!</p>`,
+  imports: [SharedModule, SpinnerComponent],
+  template: `<h2>Sample-A Component  
+    @if (myQuery.isFetching()) {
+      <app-spinner></app-spinner>
+    }
+  </h2>`,
   styles: ``,
   selector: 'app-sample-a',
 })
 export class SampleAComponent {
   #myService = inject(DedupeService);
 
-  commoditiesQuery = injectQuery(() => ({
+  myQuery = injectQuery(() => ({
     queryKey: ['tests'],
     queryFn: () => lastValueFrom(this.#myService.getPosts$()),
 
