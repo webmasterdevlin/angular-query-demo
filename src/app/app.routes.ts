@@ -4,13 +4,13 @@ import { PollingComponent } from './pages/polling.component';
 import { PaginationComponent } from './pages/pagination.component';
 import { InfiniteScrollComponent } from './pages/infinite-scroll.component';
 import { OptimisticUpdateCacheComponent } from './pages/optimistic-update-cache.component';
-import { DedupingComponent } from './pages/deduping.component';
+import { HomeComponent } from './pages/home.component';
+import { NewTodoComponent } from './pages/new-todo.component';
 
 export const appRoutes: Routes = [
   {
     path: '',
-    loadComponent: () =>
-      import('../app/pages/home.component').then((m) => m.HomeComponent),
+    component: HomeComponent,
   },
   {
     path: 'infinite-scroll',
@@ -34,12 +34,14 @@ export const appRoutes: Routes = [
   },
   {
     path: 'new-todo',
-    loadComponent: () =>
-      import('../app/pages/new-todo.component').then((m) => m.NewTodoComponent),
+    component: NewTodoComponent,
   },
   {
     path: 'deduping',
-    component: DedupingComponent,
+    loadComponent: () =>
+      import('../app/pages/deduping.component').then(
+        (m) => m.DedupingComponent,
+      ),
   },
   {
     path: '**',
