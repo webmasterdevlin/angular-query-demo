@@ -51,10 +51,10 @@ export const appRoutes: Routes = [
 
 export const pathNames = Object.entries({
   home: '/',
-  'optimistic update cache': '/optimistic-update-cache',
-  'infinite scroll': '/infinite-scroll',
-  pagination: '/pagination',
   prefetching: '/prefetching',
-  polling: '/polling',
   deduping: '/deduping',
+  'optimistic update cache': '/optimistic-update-cache',
+  polling: '/polling',
+  pagination: '/pagination',
+  'infinite scroll': '/infinite-scroll',
 } as const);

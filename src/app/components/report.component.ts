@@ -6,9 +6,7 @@ import {
   EventEmitter,
   input,
 } from '@angular/core';
-import {
-  injectQuery,
-} from '@tanstack/angular-query-experimental';
+import { injectQuery } from '@tanstack/angular-query-experimental';
 import { lastValueFrom } from 'rxjs';
 import { ReportService } from '../services/report.service';
 import { names } from '../queryKey';
@@ -18,7 +16,7 @@ import { JsonPipe } from '@angular/common';
   changeDetection: ChangeDetectionStrategy.OnPush,
   selector: 'app-report',
   standalone: true,
-  imports:[JsonPipe],
+  imports: [JsonPipe],
   template: `
     <div>
       <h2>
@@ -58,8 +56,8 @@ export class ReportComponent {
   reportQuery = injectQuery(() => ({
     enabled: this.id() > 0,
     queryKey: [names.report, this.id()],
-    queryFn: async () => lastValueFrom(
-        this.#reportService.getReportById$(this.id())
-      )
+    queryFn: async () =>
+      lastValueFrom(this.#reportService.getReportById$(this.id())),
+    staleTime: 1000 * 60 * 5,
   }));
 }

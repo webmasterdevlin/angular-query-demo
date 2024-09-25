@@ -37,6 +37,8 @@ export class ReportsComponent {
   reportsQuery = injectQuery(() => ({
     queryKey: [names.reports],
     queryFn: () => lastValueFrom(this.#reportService.getReports$()),
+    staleTime: Infinity,
+    gcTime: Infinity,
   }));
 
   async handleOnMouseEnter(reportId: number) {
@@ -45,7 +47,10 @@ export class ReportsComponent {
     leading to a faster experience. */
     await this.queryClient.prefetchQuery({
       queryKey: [names.report, reportId],
-      queryFn: () => lastValueFrom(this.#reportService.getReportById$(reportId)),
+      queryFn: () =>
+        lastValueFrom(this.#reportService.getReportById$(reportId)),
+      staleTime: Infinity,
+      gcTime: Infinity,
     });
   }
 }
