@@ -9,7 +9,7 @@ import {
 import { injectQuery } from '@tanstack/angular-query-experimental';
 import { lastValueFrom } from 'rxjs';
 import { ReportService } from '../services/report.service';
-import { names } from '../queryKey';
+import { names } from '../state/server/queryKey';
 import { JsonPipe } from '@angular/common';
 
 @Component({

@@ -6,4 +6,4 @@ export const names = {
   reports: 'reports',
   todos: 'todos',
   posts: 'posts',
-};
+} as const;

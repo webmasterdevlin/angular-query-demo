@@ -3,7 +3,7 @@ import { TodoService } from '../services/todo.service';
 import {
   injectQuery,
 } from '@tanstack/angular-query-experimental';
-import { names } from '../queryKey';
+import { names } from '../state/server/queryKey';
 import { lastValueFrom } from 'rxjs';
 import { cn } from '../utilities/style';
 import { SharedModule } from '../shared/shared.module';

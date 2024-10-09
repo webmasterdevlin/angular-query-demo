@@ -5,7 +5,7 @@ import {
 } from '@tanstack/angular-query-experimental';
 import { CommodityService } from '../services/commodity.service';
 import { lastValueFrom } from 'rxjs';
-import { names } from '../queryKey';
+import { names } from '../state/server/queryKey';
 import { SpinnerComponent } from '../components/spinner.component';
 
 @Component({

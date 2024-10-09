@@ -11,7 +11,7 @@ import {
   injectQueryClient,
 } from '@tanstack/angular-query-experimental';
 import { lastValueFrom } from 'rxjs';
-import { names } from 'src/app/queryKey';
+import { names } from 'src/app/state/server/queryKey';
 import { MovieService } from '../services/movie.service';
 import { Movie } from '../models';
 import { cn } from '../utilities/style';

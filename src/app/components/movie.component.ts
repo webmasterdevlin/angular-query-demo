@@ -11,7 +11,7 @@ import {
 } from '@tanstack/angular-query-experimental';
 import { lastValueFrom } from 'rxjs';
 import { MovieService } from '../services/movie.service';
-import { names } from '../queryKey';
+import { names } from '../state/server/queryKey';
 
 @Component({
   changeDetection: ChangeDetectionStrategy.OnPush,
