@@ -37,8 +37,8 @@ export class ReportsComponent {
   reportsQuery = injectQuery(() => ({
     queryKey: [names.reports],
     queryFn: () => lastValueFrom(this.#reportService.getReports$()),
-    staleTime: Infinity,
-    gcTime: Infinity,
+    staleTime: Infinity, // default is 0 seconds
+    gcTime: Infinity, // default is 5 minutes
   }));
 
   async handleOnMouseEnter(reportId: number) {
