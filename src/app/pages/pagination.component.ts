@@ -67,7 +67,7 @@ export class PaginationComponent {
       lastValueFrom(
         this.#commoditiesService.getCommodities$(this.page(), this.pageSize),
       ),
-    placeholderData: keepPreviousData,
+    placeholderData: keepPreviousData, // Keep previous data on the UI while fetching
     staleTime: 1000 * 60 * 1, // 1 minute
   }));
 
