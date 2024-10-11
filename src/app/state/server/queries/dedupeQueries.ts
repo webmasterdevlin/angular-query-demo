@@ -10,6 +10,5 @@ export function injectDedupeQuery() {
   return injectQuery(() => ({
     queryKey: [names.posts],
     queryFn: () => lastValueFrom(myService.getPosts$()),
-    staleTime: 5000,
   }));
 }
