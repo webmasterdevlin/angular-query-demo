@@ -13,7 +13,7 @@ import { injectDedupeQuery } from '../state/server/queries/dedupeQueries';
   imports: [SharedModule, SampleAComponent, SampleBComponent, SpinnerComponent],
   template: `<h1>
       Deduping Page
-      @if (myQuery.isFetching()) {
+      @if (myQuery.status() === 'pending') {
         <app-spinner></app-spinner>
       }
     </h1>

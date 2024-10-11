@@ -11,7 +11,7 @@ import { injectDedupeQuery } from '../state/server/queries/dedupeQueries';
   imports: [SharedModule, SpinnerComponent],
   template: `<h2>
     Sample-B Component
-    @if (myQuery.isFetching()) {
+    @if (myQuery.status() === 'pending') {
       <app-spinner></app-spinner>
     }
   </h2>`,
