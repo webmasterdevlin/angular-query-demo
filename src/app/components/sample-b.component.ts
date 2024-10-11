@@ -26,6 +26,7 @@ export class SampleBComponent implements OnInit {
     this.#myService.getUsers$().pipe(untilDestroyed(this)).subscribe();
   }
 
+  // reusable query
   // Angular Query does auto deduplication
   myQuery = injectDedupeQuery();
 
