@@ -13,47 +13,47 @@ import { SpinnerComponent } from '../components/spinner.component';
   imports: [SpinnerComponent],
   standalone: true,
   template: `<h2>Pagination (Page {{ page() }})</h2>
-  <ul
-    class="grid list-none grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5"
-  >
-    @for (commodity of commoditiesQuery.data()?.data; track commodity.id) {
-      <li class="flex flex-col rounded-md bg-white p-4 shadow-md">
+    <ul
+      class="grid list-none grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5"
+    >
+      @for (commodity of commoditiesQuery.data()?.data; track commodity.id) {
+        <li class="flex flex-col rounded-md bg-white p-4 shadow-md">
           <span class="text-lg font-semibold">
             Name:
             {{ commodity.name }}
           </span>
-        <span class="text-gray-600">
+          <span class="text-gray-600">
             Price:
-          {{ commodity.price }}
+            {{ commodity.price }}
           </span>
-        <span class="text-gray-600">
+          <span class="text-gray-600">
             Quantity:
-          {{ commodity.quantity }}
+            {{ commodity.quantity }}
           </span>
-      </li>
-    }
-  </ul>
-  <div class="flex items-center gap-3">
-    <button
-      [disabled]="page() === 1"
-      class="rounded bg-blue-500 px-4 py-2 font-bold text-white hover:bg-blue-700"
-      (click)="setPage(page() - 1)"
-    >
-      Previous
-    </button>
-    <button
-      [disabled]="
+        </li>
+      }
+    </ul>
+    <div class="flex items-center gap-3">
+      <button
+        [disabled]="page() === 1"
+        class="rounded bg-blue-500 px-4 py-2 font-bold text-white hover:bg-blue-700"
+        (click)="setPage(page() - 1)"
+      >
+        Previous
+      </button>
+      <button
+        [disabled]="
           commoditiesQuery.isRefetching() || !commoditiesQuery.data()?.next
         "
-      class="rounded bg-blue-500 px-4 py-2 font-bold text-white hover:bg-blue-700"
-      (click)="setPage(page() + 1)"
-    >
-      Next
-    </button>
-    @if (commoditiesQuery.isRefetching()) {
-      <app-spinner></app-spinner>
-    }
-  </div>`,
+        class="rounded bg-blue-500 px-4 py-2 font-bold text-white hover:bg-blue-700"
+        (click)="setPage(page() + 1)"
+      >
+        Next
+      </button>
+      @if (commoditiesQuery.isRefetching()) {
+        <app-spinner></app-spinner>
+      }
+    </div>`,
 })
 export class PaginationComponent {
   #commoditiesService = inject(CommodityService);
@@ -68,7 +68,7 @@ export class PaginationComponent {
         this.#commoditiesService.getCommodities$(this.page(), this.pageSize),
       ),
     placeholderData: keepPreviousData,
-    staleTime: 5000,
+    staleTime: 1000 * 60 * 1, // 1 minute
   }));
 
   setPage(page: number) {
