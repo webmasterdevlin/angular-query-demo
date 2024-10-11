@@ -4,6 +4,7 @@ import { lastValueFrom } from 'rxjs';
 import { TodoService } from 'src/app/services/todo.service';
 import { names } from '../queryKey';
 
+// reusable mutation
 export function addTodoMutation() {
   const todoService = inject(TodoService);
 

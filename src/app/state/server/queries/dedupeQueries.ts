@@ -4,6 +4,7 @@ import { lastValueFrom } from 'rxjs';
 import { DedupeService } from 'src/app/services/dedupe.service';
 import { names } from '../queryKey';
 
+// reusable query
 export function injectDedupeQuery() {
   const myService = inject(DedupeService);
 
