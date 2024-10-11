@@ -58,6 +58,5 @@ export class ReportComponent {
     queryKey: [names.report, this.id()],
     queryFn: async () =>
       lastValueFrom(this.#reportService.getReportById$(this.id())),
-    staleTime: 1000 * 60 * 5, // 5 minutes
   }));
 }
