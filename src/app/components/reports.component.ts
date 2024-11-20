@@ -9,7 +9,6 @@ import { ReportService } from '../services/report.service';
 
 @Component({
   selector: 'app-reports',
-  standalone: true,
   template: `<h2>Prefetching in tanstack query</h2>
     <div class="todo-container mb-4">
       @for (report of reportsQuery.data(); track report.id) {

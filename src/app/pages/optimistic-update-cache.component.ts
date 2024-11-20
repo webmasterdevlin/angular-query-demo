@@ -4,7 +4,6 @@ import { MoviesComponent } from '../components/movies.component';
 
 @Component({
   selector: 'app-optimistic-update-cache',
-  standalone: true,
   imports: [MovieComponent, MoviesComponent],
   template: ` @if (id() > -1) {
       <app-movie [id]="id()" (setMovieId)="id.set($event)" />

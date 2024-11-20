@@ -5,7 +5,6 @@ import { addTodoMutation } from '../state/server/mutations/todoMutations';
 
 @Component({
   selector: 'app-new-todo',
-  standalone: true,
   imports: [SharedModule],
   template: `
     <div>

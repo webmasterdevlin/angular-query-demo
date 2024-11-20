@@ -15,7 +15,6 @@ import { JsonPipe } from '@angular/common';
 @Component({
   changeDetection: ChangeDetectionStrategy.OnPush,
   selector: 'app-report',
-  standalone: true,
   imports: [JsonPipe],
   template: `
     <div>

@@ -6,9 +6,7 @@ import {
   EventEmitter,
   input,
 } from '@angular/core';
-import {
-  injectQuery,
-} from '@tanstack/angular-query-experimental';
+import { injectQuery } from '@tanstack/angular-query-experimental';
 import { lastValueFrom } from 'rxjs';
 import { MovieService } from '../services/movie.service';
 import { names } from '../state/server/queryKey';
@@ -16,7 +14,6 @@ import { names } from '../state/server/queryKey';
 @Component({
   changeDetection: ChangeDetectionStrategy.OnPush,
   selector: 'app-movie',
-  standalone: true,
   template: `
     <div>
       <h2>
@@ -73,5 +70,4 @@ export class MovieComponent {
       return lastValueFrom(this.#movieService.getMovieById$(this.id()));
     },
   }));
-
 }

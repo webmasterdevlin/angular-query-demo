@@ -1,8 +1,6 @@
 import { Component, inject, signal } from '@angular/core';
 import { TodoService } from '../services/todo.service';
-import {
-  injectQuery,
-} from '@tanstack/angular-query-experimental';
+import { injectQuery } from '@tanstack/angular-query-experimental';
 import { names } from '../state/server/queryKey';
 import { lastValueFrom } from 'rxjs';
 import { cn } from '../utilities/style';
@@ -10,7 +8,6 @@ import { SharedModule } from '../shared/shared.module';
 
 @Component({
   selector: 'app-polling',
-  standalone: true,
   imports: [SharedModule],
   template: `
     <div>
@@ -38,10 +35,9 @@ import { SharedModule } from '../shared/shared.module';
       ></span>
       <h2>Todo List</h2>
       <ul>
-        <a
-          class="text-indigo-700"
-          routerLink="/new-todo" target="_blank">
-        Add new</a>
+        <a class="text-indigo-700" routerLink="/new-todo" target="_blank">
+          Add new</a
+        >
         @for (todo of todoListQuery.data(); track todo.id) {
           <li>{{ todo.title }}</li>
         }

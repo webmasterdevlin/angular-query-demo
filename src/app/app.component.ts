@@ -1,4 +1,3 @@
-import { AngularQueryDevtools } from '@tanstack/angular-query-devtools-experimental';
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { NavBarComponent } from './components/nav-bar.component';
@@ -6,8 +5,8 @@ import { NavBarComponent } from './components/nav-bar.component';
 @Component({
   changeDetection: ChangeDetectionStrategy.OnPush,
   selector: 'app-root',
-  standalone: true,
-  imports: [AngularQueryDevtools, RouterModule, NavBarComponent],
+  providers: [],
+  imports: [RouterModule, NavBarComponent],
   template: `
     <app-nav-bar />
     <div
@@ -15,7 +14,6 @@ import { NavBarComponent } from './components/nav-bar.component';
     >
       <router-outlet></router-outlet>
     </div>
-    <angular-query-devtools initialIsOpen />
   `,
 })
 export class AppComponent {}

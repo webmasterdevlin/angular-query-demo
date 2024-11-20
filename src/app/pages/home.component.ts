@@ -2,11 +2,10 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-home',
-  standalone: true,
   template: ` <h1
-      class="inline-block bg-gradient-to-r from-red-500 to-amber-500 bg-clip-text text-transparent"
+      class="inline-block w-full bg-gradient-to-r from-red-500 to-amber-500 bg-clip-text text-center text-transparent"
     >
-      Tanstack Angular Query at NG-DE
+      Tanstack Angular Query
     </h1>
     <h2>
       Powerful asynchronous state management for TS/JS, React, Solid, Vue,

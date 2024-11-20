@@ -1,7 +1,5 @@
 import { Component, inject } from '@angular/core';
-import {
-  injectInfiniteQuery,
-} from '@tanstack/angular-query-experimental';
+import { injectInfiniteQuery } from '@tanstack/angular-query-experimental';
 import { CommodityService } from '../services/commodity.service';
 import { lastValueFrom } from 'rxjs';
 import { names } from '../state/server/queryKey';
@@ -9,7 +7,6 @@ import { InViewDirective } from '../utilities/in-view.directive';
 
 @Component({
   selector: 'app-infinite-scroll',
-  standalone: true,
   imports: [InViewDirective],
   template: `
     <h2>Infinite Scroll</h2>
@@ -30,7 +27,10 @@ Scroll up to load previous..</pre
         <pre>{{ infiniteQuery.error()?.message }}</pre>
       }
       @default {
-        @for (commodityPage of infiniteQuery.data()?.pages; track commodityPage) {
+        @for (
+          commodityPage of infiniteQuery.data()?.pages;
+          track commodityPage
+        ) {
           <div>
             @for (commodity of commodityPage.data; track commodity.id) {
               <div class="mb-5 flex flex-col rounded-md bg-white p-4 shadow-md">

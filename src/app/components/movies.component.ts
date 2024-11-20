@@ -20,7 +20,6 @@ import { SharedModule } from '../shared/shared.module';
 @Component({
   changeDetection: ChangeDetectionStrategy.OnPush,
   selector: 'app-movies',
-  standalone: true,
   imports: [SharedModule],
   template: `<div>
     <h1>Watch History</h1>

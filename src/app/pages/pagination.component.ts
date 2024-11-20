@@ -11,7 +11,6 @@ import { SpinnerComponent } from '../components/spinner.component';
 @Component({
   selector: 'app-pagination',
   imports: [SpinnerComponent],
-  standalone: true,
   template: `<h2>Pagination (Page {{ page() }})</h2>
     <ul
       class="grid list-none grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5"

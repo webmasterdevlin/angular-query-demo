@@ -9,7 +9,6 @@ import { injectDedupeQuery } from '../state/server/queries/dedupeQueries';
 
 @UntilDestroy()
 @Component({
-  standalone: true,
   imports: [SharedModule, SampleAComponent, SampleBComponent, SpinnerComponent],
   template: `<h1>
       Deduping Page

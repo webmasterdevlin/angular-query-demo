@@ -8,7 +8,6 @@ import {
 
 // This directive is used to detect when an element is in view
 @Directive({
-  standalone: true,
   selector: '[appInView]',
 })
 export class InViewDirective implements OnDestroy {

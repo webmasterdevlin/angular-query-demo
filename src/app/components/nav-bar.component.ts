@@ -4,7 +4,6 @@ import { SharedModule } from '../shared/shared.module';
 
 @Component({
   selector: 'app-nav-bar',
-  standalone: true,
   imports: [SharedModule],
   template: `
     <nav
@@ -31,7 +30,7 @@ import { SharedModule } from '../shared/shared.module';
       >
         <div class="text-sm lg:flex-grow">
           <a
-            *ngFor="let item of items; trackBy trackByFn"
+            *ngFor="let item of items; trackBy: trackByFn"
             class="mr-4 mt-4 block text-gray-700 hover:text-rose-900 lg:mt-0 lg:inline-block"
             [routerLink]="item[1]"
             routerLinkActive="font-bold"

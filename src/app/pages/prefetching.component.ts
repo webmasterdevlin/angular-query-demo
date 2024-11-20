@@ -4,7 +4,6 @@ import { ReportsComponent } from '../components/reports.component';
 
 @Component({
   selector: 'app-prefetching',
-  standalone: true,
   imports: [ReportComponent, ReportsComponent],
   template: ` @if (id() > -1) {
       <app-report [id]="id()" (setReportId)="id.set($event)" />
