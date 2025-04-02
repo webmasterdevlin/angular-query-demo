@@ -7,9 +7,7 @@ import { Injectable, inject } from '@angular/core';
 export class DedupeService {
   #http = inject(HttpClient);
 
-  getPosts$ = () =>
-    this.#http.get(`https://jsonplaceholder.typicode.com/posts`).pipe();
+  getPosts$ = () => this.#http.get(`http://localhost:8080/posts`).pipe();
 
-  getUsers$ = () =>
-    this.#http.get(`https://jsonplaceholder.typicode.com/users`).pipe();
+  getUsers$ = () => this.#http.get(`http://localhost:8080/users`).pipe();
 }
